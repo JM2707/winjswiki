@@ -31,7 +31,7 @@ Our team is thrilled that we are bringing WinJS back to its browser roots and ex
 
 # The Future
 This next section outlines the areas of investments for the next release of WinJS. The team likes to think in groups of three and our investments will be grouped around the short term, near term, and long term. We will identify each group with the letter “S.” This can stand for: stage, scenario, sprint, etc. We’ll use the term sprint. Sprints don’t necessarily have specific time frame associated with them just yet, but as we iterate we will strive for consistent cadence. Our goal for each sprint is to have a set of features that are of high quality that can be reliably used in your application.
-
+![Roadmap for WinJS](images/roadmap.png)
 ## S1 – Base Infrastructure, Browser Support, and Web Readiness
 The main theme of this sprint is to get our fundamental code base in shape and ready to use in web scenarios. This includes but is not limited to the following:
 
