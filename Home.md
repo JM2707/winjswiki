@@ -1,4 +1,4 @@
-Windows Library for JavaScript (WinJS) is making its first step to becoming cross-platform: the source code of the existing WinJS library is released under the Apache 2.0 license as an Open Source project by [Microsoft Open Technologies](http://aka.ms/winjsopensource), the Microsoft wholly owned subsidiary created to advance Microsoft’s investment in openness and interoperability.
+This project is actively developed by the WinJS team assigned to the Microsoft Open Tech Hub and in collaboration with the community of open source developers. Together we are dedicated to creating the best possible solution for HTML/JS/CSS application development.
 
 ## Development
 [Build WinJS](Build-WinJS)
