@@ -8,3 +8,7 @@ Windows Library for JavaScript (WinJS) is making its first step to becoming cros
 
 ## Roadmap
 [Current roadmap](Roadmap)
+
+## Documentation & Examples
+[MSDN WinJS Documentation](http://msdn.microsoft.com/en-us/library/windows/apps/hh465493.aspx)
+[Live Code Preview](http://try.buildwinjs.com)
