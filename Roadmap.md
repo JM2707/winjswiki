@@ -25,7 +25,9 @@ At the time of this writing, the number one feature request for WinJS is being a
 * CSS files are now being generated with [Less](http://lesscss.org/)
 * Unit tests are runnable using [QUnit](http://qunitjs.com/)
 
-This has been quite an undertaking for the team and we’re excited to share our progress. Not only has our team being working on the internals of the project, we very excited to show the current cross-platform browser support at [http://try.buildwinjs.com](http://try.buildwinjs.com/).
+This has been quite an undertaking for the team and we’re excited to share our progress.
+
+WinJS does not have a strong dependency on WinRT. WinJS will adapt to use mechanisms other than WinRT if it’s not available, meaning that it can truly run cross-platform and cross-browser which you can try via: http://try.buildwinjs.com in the browser of your choice. The team still has plenty of work to do here, so try it out, find issues, and file bugs.
 
 Our team is thrilled that we are bringing WinJS back to its browser roots and excited to see where the web takes us.
 
