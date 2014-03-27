@@ -1,13 +1,11 @@
 # Outline
-Windows Library for JavaScript (WinJS) is making its first step to becoming cross-platform: the source code of the existing WinJS library is released under the Apache 2.0 license as an Open Source project by [Microsoft Open Technologies](http://aka.ms/winjsopensource), the Microsoft wholly owned subsidiary created to advance Microsoft’s investment in openness and interoperability.
-
-The following in this document outlines our roadmap for WinJS project. The team will use this as a planning and framing document for WinJS, not an exact specification or check list of features to come. Our plans can change and we are flexible. We especially value your feedback and want you participate with us as we plan our upcoming releases.
+The following in this document outlines our roadmap for WinJS project. The WinJS team, which is now assigned to the MS Open Tech Hub, will use this as a planning and framing document for WinJS, not an exact specification or check list of features to come. Our plans can change and we are flexible. We especially value your feedback and want you participate with us as we plan our upcoming releases.
 
 WinJS is a set of JavaScript toolkits that allow developers to build applications using HTML/JS/CSS technology forged with the following principles in mind:
 * Provide developers with a distinctive set UI controls with high polish and performance; as well as, fundamental support for touch, mouse, keyboard and accessibility
 * Provide developers with a cohesive set of components and utilities to build the scaffolding and infrastructure of their applications
 
-The team will continue to use these guiding principles as we shape the vision for the WinJS project. However, in order to move forward, we believe it’s beneficial to understand how we’ve got here.
+The team will continue to use these guiding principles as we shape the vision for the WinJS project. However, in order to move forward, we believe it’s beneficial to understand how we've gotten here.
 
 # The Past
 Not many know, but WinJS was actually born in the browser – and in the beginning, goals were lofty and skies were definitely blue. As the project moved forward, vision became clearer and scenarios became crisper. And like all engineering projects, scope, risk, and resources also shaped the vision of the first release WinJS 1.0 with Windows 8.
@@ -22,7 +20,7 @@ The team will be applying all the lessons learned from our previous releases as 
 
 # The Present
 At the time of this writing, the number one feature request for WinJS is being able to run it cross-platform and in the browser. The team believes that WinJS should be compatible with the tools, libraries, and solutions that many web developers use and love today. So here are just some of things the team has been working on to achieve this:
-* The WinJS project is now open source and hosted on GitHub
+* The WinJS project is now an MS Open Tech open source project and hosted on GitHub
 * The WinJS build infrastructure has been moved over to use [GruntJS](http://gruntjs.com/)
 * CSS files are now being generated with [Less](http://lesscss.org/)
 * Unit tests are runnable using [QUnit](http://qunitjs.com/)
