@@ -1,5 +1,5 @@
 # Outline
-The following in this document outlines our roadmap for WinJS project. The WinJS team, which is now assigned to the MS Open Tech Hub, will use this as a planning and framing document for WinJS, not an exact specification or check list of features to come. Our plans can change and we are flexible. We especially value your feedback and want you participate with us as we plan our upcoming releases.
+The following in this document outlines our roadmap for WinJS project. The WinJS team, which is assigned to the MS Open Tech Hub, will use this as a planning and framing document for WinJS, not an exact specification or check list of features to come. Our plans can change and we are flexible. We especially value your feedback and want you participate with us as we plan our upcoming releases.
 
 WinJS is a set of JavaScript toolkits that allow developers to build applications using HTML/JS/CSS technology forged with the following principles in mind:
 * Provide developers with a distinctive set UI controls with high polish and performance; as well as, fundamental support for touch, mouse, keyboard and accessibility
