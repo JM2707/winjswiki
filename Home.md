@@ -6,6 +6,7 @@ This project is actively developed by the WinJS developers working for Microsoft
 
 ## Contributions
 * [How to contribute](Contribute)
+* [Approved Code Contributors](Approved-Code-Contributors)
 
 ## Roadmap
 * [Current roadmap](Roadmap)
