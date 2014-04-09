@@ -15,3 +15,6 @@ This compiles WinJS and opens /bin/tests/tests.html page.
 * Open 'tests.html' page in /bin/tests
 * -or-
 * Open 'test.html' page inside a specific test folder (i.e. /bin/tests/base/test.html)
+
+### Expected Test Behaviors
+-There are several tests that test for the loss and gain of focus, these tests typically fail if you interacted with the browser in even the slightest way. They should pass when re-running them.
