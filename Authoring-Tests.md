@@ -11,7 +11,7 @@ At the time WinJS went open source, there were about 4,500 tests in the project.
 * Append your test function after the last test in the file
 
 ###Anatomy of a test file
-```
+```js
 // At the top of the file, there are reference tags that define dependencies for this file,
 // generally these do not need to be modified.
 /// <reference path="..." />
