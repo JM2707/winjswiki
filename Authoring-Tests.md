@@ -1,8 +1,8 @@
 ##Tests for Pull Requests
-Testing is part of our Pull Request Requirements. Generally, for any source code affecting pull requests to be considered, tests are required to be supplied and/or modified as part of the pull request. New features will require new tests to be authored and the modification of existing features will require old tests to be updated.
+Testing is part of our pull request requirements. Generally, for any source code affecting pull requests to be considered, tests are required to be supplied and/or modified as part of the pull request. New features will require new tests to be authored and the modification of existing features will require old tests to be updated.
 
 ##History of WinJS Tests
-At the time WinJS went open source, there were about 4,500 tests in the project. These tests were originally authored for an internal testing tool which we have since abandoned. We have built a shim layer to make the existing tests work with QUnit instead and, for now, all tests authored in the future should follow the same style and syntax as the existing tests until we finalize our testing story.
+At the time WinJS went open source, there were about 4,500 tests in the project. These tests were originally authored against an internal testing tool. In order to enable developers to run these tests we have built a shim layer to make the existing tests work with QUnit instead. For now, all new tests should follow the same style and syntax as the existing tests until we finalize our testing story.
 
 ##Authoring Tests
 ###Finding the right place for your tests
