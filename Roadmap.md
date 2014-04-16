@@ -35,7 +35,7 @@ Our team is thrilled that we are bringing WinJS back to its browser roots and ex
 This next section outlines the areas of investments for the next release of WinJS. The team likes to think in groups of three and our investments will be grouped around the short term, near term, and long term. We will identify each group with the letter “S.” This can stand for: stage, scenario, sprint, etc. We’ll use the term sprint. Sprints don’t necessarily have specific time frame associated with them just yet, but as we iterate we will strive for consistent cadence. Our goal for each sprint is to have a set of features that are of high quality that can be reliably used in your application.
 ![Roadmap for WinJS](images/roadmap.png)
 ## S1 – Base Infrastructure, Browser Support, and Web Readiness
-The main theme of this sprint is to get our fundamental code base in shape and ready to use in web scenarios. This includes but is not limited to the following:
+The main theme is to get our fundamental code base in shape and ready to use in web scenarios. This includes but is not limited to the following:
 
 ### Base Infrastructure
 Complete any necessary internal tool migrations to have WinJS working on web tools
@@ -50,7 +50,7 @@ Allow developers to load in components of WinJS, rather than having to include e
 Provide optimized minified versions of WinJS for web deployment.
 
 ## S2 – Finish Browser & Web Readiness, Consolidation, and Devices
-The main theme of this sprint is to finish and polish work around browsers from S1, consolidating the versions of WinJS that already exist, and focusing on WinJS uses on devices. This includes but is not limited to the following:
+The main theme is to finish and polish work around browsers from S1, consolidating the versions of WinJS that already exist, and focusing on WinJS uses on devices. This includes but is not limited to the following:
 
 ### Finish Desktop and Mobile Browser Support
 Complete any work necessary to fill out our graded browser support.
@@ -65,7 +65,7 @@ Consolidate the functionality between WinJS 2.0, WinJS 2.1, and WinJS 1.0 Xbox i
 Focus on hosting WinJS in WebView environments like Apache Cordova
 
 ## S3 – New Features, Interoperability, and Adaptive Apps
-The main theme of this sprint is to work on new features for WinJS and interoperability with other popular JavaScript libraries. This includes but is not limited to the following:
+The main theme is to work on new features for WinJS and interoperability with other popular JavaScript libraries. This includes but is not limited to the following:
 
 ### New Features
 SPA utilities and new UI controls 
