@@ -1,0 +1,1 @@
+The following outlines how issues, feature requests, and pull requests will be triaged for the WinJS project.
