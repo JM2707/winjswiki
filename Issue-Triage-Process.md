@@ -82,6 +82,6 @@ When an issue is closed the `resolution` label will be applied to the issue. The
 * `resolution: duplicate` - this issue is a duplicate of another issue previously submitted
 * `resolution: external` - the fundamental issue is found deeper in the technology stack and the WinJS project cannot address the issue (e.g. root cause of an issue is found in a browser)
 * `resolution: fixed` - the issue was fixed
-* `resolution: no repo` - the issue cannot be reproduced at this time
+* `resolution: no repro` - the issue cannot be reproduced at this time
 * `resolution: rejected` - the pull request was rejected
 * `resolution: wontfix` - the issue will not be fixed at this time
