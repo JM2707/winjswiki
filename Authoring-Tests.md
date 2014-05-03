@@ -76,3 +76,6 @@ All assertion APIs are exposed through the `LiveUnit.Assert` namespace, i.e. `Li
 * isTrue(truthy, message)
 * isNull(obj, message) // undefined is also accepted
 * isNotNull(obj, message)
+
+### Unit Tests Status 
+Please refer to [http://try.buildwinjs.com/#status](http://try.buildwinjs.com/#status) for the latest status of the unit tests, and the list of known issues.
