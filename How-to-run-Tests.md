@@ -20,5 +20,5 @@ This compiles WinJS and opens /bin/tests/tests.html page.
 * Some UI tests inject DOM elements and explicitly hit test against absolute coordinates, to prevent these tests from failing due to user interactions, you will not be able to interact with the QUnit UI while the tests are running. In general, it is advised to not interact with the test page during a test run as it can produce false negatives.
 * There are several tests that test for the loss and gain of focus, these tests typically fail if you interacted with the browser in even the slightest way. They should pass when re-running them.
 
-### Unit Tests Status 
-Please refer to [http://try.buildwinjs.com/#status](http://try.buildwinjs.com/#status) for the latest status of the unit tests, and the list of known issues.
+### Tests Status 
+Please refer to [http://try.buildwinjs.com/#status](http://try.buildwinjs.com/#status) for the latest status of the unit tests and the list of known issues.
