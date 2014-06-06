@@ -7,7 +7,7 @@ This page describes the light weight process on how to share repos of issues fou
 This type of information is not required, but is appreciated as it brings more context and clarity to the issue.
 
 ## Share Environment Information
-If the issue was found in one of our well known feature here's a super quick way to share:
+If the issue was found in one of our well known features here's a super quick way to share:
 
 1. In the browser where the issue occured, navigate to `http://try.buildwinjs.com/#{component name}`, e.g. [http://try.buildwinjs.com/#pivot](http://try.buildwinjs.com/#pivot)
 2. At the top of the component page, click on the `open an issue` link at the top of the page.
