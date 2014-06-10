@@ -4,7 +4,7 @@ This page describes the light weight process on how to share repos of issues fou
 * Video of the sequence of events leading up to and including the issue
 * Environmental information including the platform (Windows, Mac, iOS, Android, etc.) and browser (IE, Chrome, Firefox, etc.) versions where the issue occurred
 
-This type of information is not required, but is appreciated as it brings more context and clarity to the issue.
+This type of information is not required, but is appreciated as it brings more context and makes it more likely that we will be able to fix the issue.
 
 ## Share Environment Information
 If the issue was found in one of our well known features here's a super quick way to share:
