@@ -28,7 +28,7 @@ What this does mean is that if an issue is found in a configuration that is not 
  
 As we move forward with WinJS, it is expected that more configurations will be added or tweaked. 
 
-To see the project's current progress visit the [status](http://try.buildwinjs.com) page on [http://try.buildwinjs.com](http://try.buildwinjs.com)
+To see the project's current progress visit the [status](http://try.buildwinjs.com/#status) page on [http://try.buildwinjs.com](http://try.buildwinjs.com)
 
 
  
