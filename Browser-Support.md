@@ -7,7 +7,7 @@ This means:
 * If contributing, it is expected pull requests are tested against this table
 * Any new feature development can rely on standard native capabilities exposed across these configurations
 
-|   | IE10 | IE11 | Chrome (current) | Firefox (current) | Safari (current) | Android Browser |
+|   | IE10 | IE11 | Chrome* | Firefox* | Safari* | Android Browser |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | __Windows 7 SP1__ | x | x | x | x | | |
 | __Windows 8__ | x | | x | x | | |
@@ -18,6 +18,7 @@ This means:
 | __Android Jelly Bean__ | | | x | | | x |
 | __Android Kitkat__ | | | | x |
 | __iOS 7__ | | | | | x |
+>*Indicates the current version of the browser
 
 Now this doesn’t mean that WinJS cannot be hosted in other configurations.
 
