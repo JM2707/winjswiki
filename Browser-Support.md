@@ -16,7 +16,7 @@ This means:
 | __Windows Phone 8.1__ | | x | | | |
 | __Mac OS X Mavericks__ | | | x | x | x |
 | __Android Jelly Bean__ | | | x | | | x |
-| __Android Kitkat__ | | | | x |
+| __Android Kitkat__ | | | x |
 | __iOS 7__ | | | | | x |
 >*Indicates the current version of the browser
 
