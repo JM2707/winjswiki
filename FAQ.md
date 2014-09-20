@@ -28,3 +28,7 @@ Absolutely! We have made major investments in cross-browser compatibility with 3
 
 https://github.com/winjs/winjs/wiki/Browser-Support
 
+
+# Can I link against WinJS 3.0 as a reference for my Windows Store App?
+
+WinJS 3.0 will not be released as a framework package. Feel free to grab it from a package manager or download it directly and bundle it as you would any other JavaScript library.
