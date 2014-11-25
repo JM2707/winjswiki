@@ -6,6 +6,11 @@ This page describes the light weight process on how to share repos of issues fou
 
 This type of information is not required, but is appreciated as it brings more context and makes it more likely that we will be able to fix the issue.
 
+## Table of Contents
+- [Share Environment Information](#share-environment-information)
+- [Sharing Images and Code Snippets](#sharing-images-and-code-snippets)
+- [Sharing Videos and full Code Samples](#sharing-videos-and-full-code-samples)
+
 ## Share Environment Information
 If the issue was found in one of our well known features here's a super quick way to share:
 
