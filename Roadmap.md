@@ -1,40 +1,15 @@
 # Outline
 The following in this document outlines our roadmap for WinJS project. The WinJS developers, working for Microsoft Open Technologies, will use this as a planning and framing document for WinJS, not an exact specification or check list of features to come. Our plans can change and we are flexible. We especially value your feedback and want you participate with us as we plan our upcoming releases.
 
-WinJS is a set of JavaScript toolkits that allow developers to build applications using HTML/JS/CSS technology forged with the following principles in mind:
-* Provide developers with a distinctive set UI controls with high polish and performance; as well as, fundamental support for touch, mouse, keyboard and accessibility
-* Provide developers with a cohesive set of components and utilities to build the scaffolding and infrastructure of their applications
+WinJS is a set of JavaScript toolkits that allow developers to build applications using HTML/JS/CSS technology forged with one key principle: 
+* Provide developers with a distinctive set UI controls with high polish and performance as well as fundamental support for touch, mouse, keyboard, and accessibility
 
-The team will continue to use these guiding principles as we shape the vision for the WinJS project. However, in order to move forward, we believe it’s beneficial to understand how we've gotten here.
+The team will continue to use these guiding principles as we shape the vision for the WinJS project. You can find details about the history of the project [here](History).
 
-# The Past
-Not many know, but WinJS was actually born in the browser – and in the beginning, goals were lofty and skies were definitely blue. As the project moved forward, vision became clearer and scenarios became crisper. And like all engineering projects, scope, risk, and resources also shaped the vision of the first release WinJS 1.0 with Windows 8.
-Since then, WinJS has been subsequently released three more times:
-* WinJS 2.0 with Windows 8.1
-* WinJS Xbox 1.0 with Xbox One
-* WinJS Phone 2.1 with Windows Phone 8.1
+# WinJS Roadmap
+This section outlines the areas of investments for the next releases of WinJS. The team has been learning and iterating on our process methodology on how to run and release the WinJS project. We've moved to assigning work into concrete milestones with the goal to complete it during that milestone's timeline. Once we all feel good about the quality, feature sets, and improvements we will release a new version of WinJS.
 
-From these releases, the team has gathered important feedback from developers who use WinJS for building their applications; as well as, truly understanding just how much developers push and bend API’s to the extreme. This battle testing was a necessity for measuring and evaluating the reliability of the features of WinJS. Also with shipping multiple releases, the team was able to grasp and understand the full impacts of performance, compatibility, and migration for developers moving their applications forward. 
-
-The team will be applying all the lessons learned from our previous releases as we move forward with WinJS.
-
-# The Present
-At the time of this writing, the number one feature request for WinJS is being able to run it cross-platform and in the browser. The team believes that WinJS should be compatible with the tools, libraries, and solutions that many web developers use and love today. So here are just some of things the team has been working on to achieve this:
-* The WinJS project is now an MS Open Tech open source project and hosted on GitHub
-* The WinJS build infrastructure has been moved over to use [GruntJS](http://gruntjs.com/)
-* CSS files are now being generated with [Less](http://lesscss.org/)
-* Unit tests are runnable using [QUnit](http://qunitjs.com/)
-
-This has been quite an undertaking for the team and we’re excited to share our progress.
-
-WinJS does not have a strong dependency on WinRT. WinJS will adapt to use mechanisms other than WinRT if it’s not available, meaning that it can truly run cross-platform and cross-browser which you can try via: http://try.buildwinjs.com in the browser of your choice. The team still has plenty of work to do here, so try it out, find issues, and file bugs.
-
-Our team is thrilled that we are bringing WinJS back to its browser roots and excited to see where the web takes us.
-
-# The Future
-This next section outlines the areas of investments for the next release of WinJS. The team likes to think in groups of three and our investments will be grouped around the short term, near term, and long term. We will group our work into milestones to be consistent with the terminology used on GitHub. Milestones don’t necessarily have specific time frame associated with them just yet, but as we iterate we will strive for consistent cadence. Our goal for each milestone is to have a set of features that are of high quality that can be reliably used in your application.
-![Roadmap for WinJS](images/roadmap.png)
-## M1 – Base Infrastructure, Browser Support, and Web Readiness
+## WinJS 3.0 – Cross Platform
 The main theme is to get our fundamental code base in shape and ready to use in web scenarios. This includes but is not limited to the following:
 
 ### Base Infrastructure
@@ -49,41 +24,28 @@ Allow developers to load in components of WinJS, rather than having to include e
 ### Minification
 Provide optimized minified versions of WinJS for web deployment.
 
-## M2 – Finish Browser & Web Readiness, Consolidation, and Devices
-The main theme is to finish and polish work around browsers from M1, consolidating the versions of WinJS that already exist, and focusing on WinJS uses on devices. This includes but is not limited to the following:
+For more details see our [blog post](http://blogs.windows.com/buildingapps/2014/09/17/winjs-everywhere/) and [release repo](https://github.com/winjs/winjs/releases/tag/release%2F3.0.1)
 
-### Finish Desktop and Mobile Browser Support
-Complete any work necessary to fill out our graded browser support.
+## WinJS 4.0 – Universal Controls and Visual Refresh
 
-### CSS Theming
-Refactor our CSS to allow developer more flexibility in theming their UI.
+The main theme  This includes but is not limited to the following:
 
-### Consolidation
-Consolidate the functionality between WinJS 2.0, WinJS 2.1, and WinJS 1.0 Xbox into one main version. Reconcile UX across these versions.
+### Universal Controls
+UI controls that enable "universal" experiences that scale across input types and screen sizes. Enabling application experiences that can reach across Phone, PC, and Tablets with one version of WinJS.
 
-### Devices: WebView
-Focus on hosting WinJS in WebView environments like Apache Cordova
+### Control Updates
+New controls ContentDialog, SplitView, AutoSuggestBox, and Toolbar as well as updates for existing controls such as Hub and Pivot.
 
-## M3 – New Features, Interoperability, and Adaptive Apps
-The main theme is to work on new features for WinJS and interoperability with other popular JavaScript libraries. This includes but is not limited to the following:
+### Interoperability - AngularJS Directives
+WinJS UI controls can be consumed as AngularJS directives while WinJS still remains framework-independent. We will enable AngularJS developers to easily leverage WinJS controls in AngularJS applications.
 
-### New Features
-SPA utilities and new UI controls 
+### Visual Refresh
+Leveraging the WinJS branding and styling capabilities, create a new visual look that reflects our own updated Windows design style.
 
-### Interoperability
-Build interoperability utilities to work with other popular JS libraries.
+## WinJS 4.1 – Polish
 
-### Adaptive Apps
-SPA utilities and possibly UI controls that helps developers span their UX across device types and platforms
+This is a minor release intended to coincide with the next major release of Windows. We will be doing the final UX polish of all controls as well as reacting to developer feedback for WinJS 4.0. We will strive to not make major API changes with this release so that apps tested using 4.0 can be easily upgraded.
 
-## Watch List
-The team knows technology changes very fast in the HTML/JS/CSS space. With that, there are sets of technologies that we are watching and staying educated on.
-
-We see the value that they bring and how WinJS could be used with them; however, we may not have the time or resources available to get to every interesting piece of technology. We are definitely interested and we just want you to know they are also on our mind:
-* TypeScript 
-* Apache Cordova
-* Web Components
-* ECMAScript 6
 
 # Feedback
 We also appreciate and invite you to give feedback and ideas for future development. So please participate with us as we plan our upcoming releases.
