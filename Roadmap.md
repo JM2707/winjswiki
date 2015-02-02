@@ -34,7 +34,7 @@ The main theme  This includes but is not limited to the following:
 UI controls that enable "universal" experiences that scale across input types and screen sizes. Enabling application experiences that can reach across Phone, PC, and Tablets with one version of WinJS.
 
 ### Control Updates
-New controls ContentDialog, SplitView, AutoSuggestBox, and Toolbar as well as updates for existing controls such as Hub and Pivot.
+New controls ContentDialog, SplitView, AutoSuggestBox, and ToolBar as well as updates for existing controls such as Hub and Pivot.
 
 ### Interoperability - AngularJS Directives
 WinJS UI controls can be consumed as AngularJS directives while WinJS still remains framework-independent. We will enable AngularJS developers to easily leverage WinJS controls in AngularJS applications.
