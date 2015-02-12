@@ -35,9 +35,17 @@ copy node_modules\winjs-modules\WinJS-custom.js .
 Edit your copy of WinJS-custom.js to include only the modules you want. `WinJS/Core` and `WinJS/Core/_WinJS` are required.
 
 Build WinJS with the r.js optimizer
+
+Unix:
 ```
 r.js -o build.js
 ```
+
+Windows:
+```
+r.js.cmd -o build.js  
+```
+
 
 > **Note:** On Windows you may need to append '.cmd' to 'r.js' so the command will look like 'r.js.cmd -o build.js'
 
