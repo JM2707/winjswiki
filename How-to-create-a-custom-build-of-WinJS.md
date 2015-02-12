@@ -36,7 +36,6 @@ Edit your copy of WinJS-custom.js to include only the modules you want. `WinJS/C
 
 Build WinJS with the r.js optimizer
 
-Unix:
 ```
 r.js -o build.js
 ```
