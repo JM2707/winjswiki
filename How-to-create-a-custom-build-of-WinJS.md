@@ -41,12 +41,6 @@ Unix:
 r.js -o build.js
 ```
 
-Windows:
-```
-r.js.cmd -o build.js  
-```
-
-
 > **Note:** On Windows you may need to append '.cmd' to 'r.js' so the command will look like 'r.js.cmd -o build.js'
 
 You can find the custom build of WinJS in `bin\WinJS.js` and include it in your application.
