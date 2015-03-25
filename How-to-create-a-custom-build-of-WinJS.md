@@ -1,50 +1,42 @@
 ## Building WinJS from stable NPM modules
-Install [RequireJS](http://www.requirejs.org/). The [r.js](http://www.requirejs.org/docs/optimization.html) optimizer is used to build the modules
-```
-npm install -g requirejs
-```
+
 Install the WinJS modules
 ```
-npm install winjs-modules
+npm install winjs-modules@4.0.0-preview
 ```
 
-Make a copy of the included example.build.js into your root directory. This file contains the default configuration to build WinJS with r.js optimizer. 
+Move into the winjs-modules directory before building.
 
 Unix
 ```
-$ cp node_modules/winjs-modules/example.build.js ./build.js
+$ cd node_modules/winjs-modules/
 ```
 
 Windows
 ```
-> copy node_modules\winjs-modules\example.build.js .\build.js
+> cd node_modules\winjs-modules\
 ```
 
-Make a copy of the WinJS-custom.js file. This is the file that defines the modules that you will include into your custom build of WinJS.
+Copy the example config file into config.js. Then make any desired changes to config.js.
 
 Unix
 ```
-cp node_modules/winjs-modules/WinJS-custom.js .
+$ cp ./example.config.js ./config.js
 ```
 
 Windows
 ```
-copy node_modules\winjs-modules\WinJS-custom.js .
+> copy example.config.js config.js
 ```
 
-Edit your copy of WinJS-custom.js to include only the modules you want. 
-**NOTE: `WinJS/Core` and `WinJS/Core/_WinJS` are required.**
+Edit WinJS-custom.js to include only the modules you want. 
+> **NOTE:** `WinJS/Core` and `WinJS/Core/_WinJS` are required.
 
-Build WinJS with the r.js optimizer
+Build WinJS
 
 ```
-r.js -o build.js
+node build-winjs.js
 ```
-
-> **Note:** On Windows you may need to append '.cmd' to 'r.js' so the command will look like 'r.js.cmd -o build.js'
 
 You can find the custom build of WinJS in `bin\WinJS.js` and include it in your application.
-
-### Limitations / Known Issues
-*  Currently the modular build doesn't custom-compile CSS since the CSS has not been modularized yet. Pre-built CSS is inside the "css" directory.
 
