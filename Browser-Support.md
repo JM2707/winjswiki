@@ -1,34 +1,19 @@
 ##WinJS Browser Support
-This the following table represents the set of browser and platform configurations that WinJS intends to support.
 
-This means:
-* The project is actively tested against this table
-* Issues or bugs found in these configurations will be triaged accordingly and fixed in subsequent releases
-* If contributing, it is expected pull requests are tested against this table
-* Any new feature development can rely on standard native capabilities exposed across these configurations
+WinJS actively tests against the following browsers:
+* Apple Safari for iOS (7+)
+* Apple Safari for Mac (current)
+* Google Android OS Browser (4.4+)
+* Google Chrome (current)
+* Microsoft Internet Explorer (10+)
+* Mozilla Firefox (current)
 
-|   | IE10 | IE11 | Chrome* | Firefox* | Safari* | Android Browser |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
-| __Windows 7 SP1__ | x | x | x | x | | |
-| __Windows 8__ | x | | x | x | | |
-| __Windows 8.1__ | x | x | x | x | 
-| __Windows Phone 8__ | x | | | | |
-| __Windows Phone 8.1__ | | x | | | |
-| __Mac OS X Mavericks__ | | | x | x | x |
-| __Android Jelly Bean__ | | | x | | | |
-| __Android Kitkat__ | | | x | | | x |
-| __iOS 7__ | | | | | x |
->*Indicates the current version of the browser
+Issues or bugs found in these configurations will be triaged accordingly and fixed in subsequent releases. If contributing to the project, it is expected that pull requests are tested against the aforementioned list. Any new feature development can rely on standard native capabilities exposed across these configurations.
 
-Now this doesn’t mean that WinJS cannot be hosted in other configurations.
+This does not mean that WinJS cannot be hosted in other configurations. There are large portions of WinJS that are written in pure JavaScript and for the most part will run in other environments.
 
-There are large portions of WinJS that are written in pure JavaScript and for the most part will run in other environments.
-
-What this does mean is that if an issue is found in a configuration that is not defined in our support table, it’s highly unlikely it will be fixed in a subsequent release. However, if you do find a bug, please submit an issue with your specific configuration. This can help the team understand the various ways WinJS is being used by the community and can give us feedback into planning subsequent releases. 
+If an issue is found in a configuration that is not defined in our support table, it is highly unlikely it will be fixed in a subsequent release. However, if you do find a bug, please submit an issue with your specific configuration. This can help the team understand the various ways WinJS is being used by the community and can give us feedback into planning subsequent releases. 
  
 As we move forward with WinJS, it is expected that more configurations will be added or tweaked. 
 
 To see the project's current progress visit the [status](http://try.buildwinjs.com/#status) page on [http://try.buildwinjs.com](http://try.buildwinjs.com)
-
-
- 
