@@ -1,9 +1,9 @@
 ##WinJS Browser Support
 
 WinJS actively tests against the following browsers:
-* Apple Safari for iOS (7+)
+* Apple Safari for iOS (current)
 * Apple Safari for Mac (current)
-* Google Android OS Browser (4.4+)
+* Google Android OS Browser (current)
 * Google Chrome (current)
 * Microsoft Internet Explorer (10+)
 * Mozilla Firefox (current)
