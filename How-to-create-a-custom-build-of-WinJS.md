@@ -45,5 +45,5 @@ Build WinJS
 node build-winjs.js
 ```
 
-You can find the custom build of WinJS in `bin\WinJS.js` and include it in your application.
+You can find the custom build of WinJS in `bin\` and include it in your application.
 
