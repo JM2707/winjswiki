@@ -1,9 +1,16 @@
 ## Building WinJS from stable NPM modules
 
-Install the WinJS modules
-```
-npm install winjs-modules@4.0.0-preview
-```
+Install the WinJS modules. There are two options based on the version of WinJS that is desired:
+
+  - WinJS 4.0.0-preview
+    ```
+    npm install winjs-modules@4.0.0-preview
+    ```
+
+  - WinJS 3.0 (stable)
+    ```
+    npm install winjs-modules
+    ```
 
 Move into the winjs-modules directory before building.
 
