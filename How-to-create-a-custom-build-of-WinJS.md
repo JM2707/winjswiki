@@ -9,7 +9,7 @@ Install the WinJS modules. There are two options based on the version of WinJS t
 
   - WinJS 3.0 (stable)
     ```
-    npm install winjs-modules
+    npm install winjs-modules@3.0.2
     ```
 
 Move into the winjs-modules directory before building.
