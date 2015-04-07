@@ -16,6 +16,10 @@ This compiles WinJS and opens /bin/tests/tests.html page.
 * -or-
 * Open 'test.html' page inside a specific test folder (i.e. /bin/tests/base/test.html)
 
+### Testing in WWAs
+* Open WWAUnitTestsApp.sln in winjs/projects/WWAUnitTestsApp/ with Visual Studio 2013
+* Start debugging via F5
+
 ### Expected Test Behaviors
 * Some UI tests inject DOM elements and explicitly hit test against absolute coordinates, to prevent these tests from failing due to user interactions, you will not be able to interact with the QUnit UI while the tests are running. In general, it is advised to not interact with the test page during a test run as it can produce false negatives.
 * There are several tests that test for the loss and gain of focus, these tests typically fail if you interacted with the browser in even the slightest way. They should pass when re-running them.
