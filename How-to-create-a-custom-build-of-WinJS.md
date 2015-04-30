@@ -1,5 +1,3 @@
-## Making a Custom WinJS Build
-
 In order to build WinJS, ensure that you have [git](http://git-scm.com/downloads) and [Node.js](http://nodejs.org/download/) installed.
 
 Clone a copy of the master WinJS git repo:
