@@ -1,49 +1,38 @@
-## Building WinJS from stable NPM modules
+## Making a Custom WinJS Build
 
-Install the WinJS modules. There are two options based on the version of WinJS that is desired:
+In order to build WinJS, ensure that you have [git](http://git-scm.com/downloads) and [Node.js](http://nodejs.org/download/) installed.
 
-  - WinJS 4.0.0-preview
-    ```
-    npm install winjs-modules@4.0.0-preview
-    ```
-
-  - WinJS 3.0 (stable)
-    ```
-    npm install winjs-modules@3.0.2
-    ```
-
-Move into the winjs-modules directory before building.
-
-Unix
+Clone a copy of the master WinJS git repo:
 ```
-$ cd node_modules/winjs-modules/
+git clone https://github.com/winjs/winjs.git
 ```
 
-Windows
+Change to the `winjs` directory:
 ```
-> cd node_modules\winjs-modules\
-```
-
-Copy the example config file into config.js. Then make any desired changes to config.js.
-
-Unix
-```
-$ cp ./example.config.js ./config.js
+cd winjs
 ```
 
-Windows
+Optionally, choose a stable revision to build instead of the tip of master. See the [list of releases](https://github.com/winjs/winjs/releases) for other options. 
 ```
-> copy example.config.js config.js
-```
-
-Edit WinJS-custom.js to include only the modules you want. 
-> **NOTE:** `WinJS/Core` and `WinJS/Core/_WinJS` are required.
-
-Build WinJS
-
-```
-node build-winjs.js
+git checkout release/4.0.0-preview
 ```
 
-You can find the custom build of WinJS in `bin\` and include it in your application.
+Install the [grunt command-line interface](https://github.com/gruntjs/grunt-cli) globally:
+```
+npm install -g grunt-cli
+```
 
+> **Note:** You may need to use sudo (for OSX, *nix, BSD etc) or run your command shell as Administrator (for Windows) to install Grunt globally.
+
+
+Grunt dependencies are installed separately in each cloned git repo. Install the dependencies with:
+```
+npm install
+```
+
+Edit `src/js/WinJS.js` to include only the modules that you want. Note that `WinJS/Core/_WinJS` is required.
+
+Run the following and the WinJS JavaScript and CSS files will be put in the `bin` directory:
+```
+grunt
+```
