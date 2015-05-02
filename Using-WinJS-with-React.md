@@ -1,7 +1,7 @@
 
 [Source: [issue #717](https://github.com/winjs/winjs/issues/717#issuecomment-63427539) by [rigdern](https://github.com/rigdern)]
 
-You can try using https://github.com/rigdern/react-winjs, an unofficial React wrapper around WinJS's controls. It applies the technique described below.
+You can try using https://github.com/winjs/react-winjs, a React wrapper around WinJS's controls. It applies the technique described below.
 
 You can wrap the WinJS ListView in a React component like this:
 
