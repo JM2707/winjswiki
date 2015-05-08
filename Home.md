@@ -15,3 +15,4 @@ This project is actively developed by the WinJS developers working for Microsoft
 * [MSDN WinJS Documentation](http://msdn.microsoft.com/en-us/library/windows/apps/hh465493.aspx)
 * [Live Code Preview](http://try.buildwinjs.com)
 * [Using WinJS with React](Using-WinJS-with-React)
+* [Styling HTML Controls](Styling-HTML-Controls)
