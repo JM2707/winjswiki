@@ -16,6 +16,9 @@
 ### Core
 * (from 4.0-Preview) WinJS.js has been split back into base.js and ui.js
 
+### Styling
+* Styling of intrinsic elements is [no longer by default](https://github.com/winjs/winjs/wiki/Styling-HTML-Controls)
+
 ### Utilities
 * The `WinJS.Utilities.isPhone` property will return undefined
 
