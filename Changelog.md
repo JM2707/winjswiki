@@ -49,6 +49,19 @@
 * Renamed the `show` method to `open`
 * Renamed the `hidden` property to `opened`
 
+### SplitView
+* (from 4.0-Preview) Renamed the `HiddenDisplayMode` enum to `ClosedDisplayMode`
+* (from 4.0-Preview) Renamed the `hiddenDisplayMode` property to `closedDisplayMode`
+* (from 4.0-Preview) Renamed the `hidePane` method to `closePane`
+* (from 4.0-Preview) Renamed the `onafterhide` event to `onafterclose`
+* (from 4.0-Preview) Renamed the `onaftershow` event to `onafteropen`
+* (from 4.0-Preview) Renamed the `onbeforehide` event to `onbeforeclose`
+* (from 4.0-Preview) Renamed the `onbeforeshow` event to `onbeforeopen`
+* (from 4.0-Preview) Renamed the `paneHidden` property to `paneOpened`
+* (from 4.0-Preview) Renamed the `ShownDisplayMode` enum to `OpenedDisplayMode`
+* (from 4.0-Preview) Renamed the `shownDisplayMode` property to `openedDisplayMode`
+* (from 4.0-Preview) Renamed the `showPane` method to `openPane`
+
 ### Typography
 * Renamed the `.win-type-xx-large` class to `.win-type-header` or `.win-h1`
 * Renamed the `.win-type-x-large` class to `.win-type-subheader` or `.win-h2`
