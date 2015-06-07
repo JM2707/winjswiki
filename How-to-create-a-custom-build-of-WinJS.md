@@ -12,7 +12,7 @@ cd winjs
 
 Optionally, choose a stable revision to build instead of the tip of master. See the [list of releases](https://github.com/winjs/winjs/releases) for other options. 
 ```
-git checkout release/4.0.0-preview
+git checkout release/4.0.0
 ```
 
 Install the [grunt command-line interface](https://github.com/gruntjs/grunt-cli) globally:
