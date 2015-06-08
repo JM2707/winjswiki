@@ -7,10 +7,10 @@
 * Added the `SplitView` control
 * Added the `ToolBar` control
 * Added the `XYFocus` utility
-* Added the ability to alternate styles of `ListView` items in a performant manner
+* Added the ability to [zebra stripe](http://en.wikipedia.org/wiki/Zebra_striping_(computer_graphics)) `ListView` items
 * Added granular `ListView` virtualization options
 * Added the `SplitViewPaneToggle` control
-* New `ListView` selection model
+* Added a new `ListView` selection model
 
 ## Breaking changes
 ### Core
@@ -76,6 +76,12 @@
 * (from 4.0-Preview) Removed the `enableXYFocus` method
 * (from 4.0-Preview) Removed the `disableXYFocus` method
 
+## Deprecations
+* Deprecated the `swipeBehavior` property of `ItemContainer` and `ListView`
+* Deprecated the `SettingsFlyout` control
+* Deprecated the `SearchBox` control
+* Deprecated the values `global` and `selection` from the `section` property in `AppBarCommand`
+
 ## Notable changes
 ### Utilities
 * Added the values `NavigationView`, `NavigationMenu`, `NavigationUp`, `NavigationDown`, `NavigationLeft`, `NavigationRight`, `NavigationAccept`, `NavigationCancel`, `GamepadA`, `GamepadB`, `GamepadX`, `GamepadY`, `GamepadRightShoulder`, `GamepadLeftShoulder`, `GamepadLeftTrigger`, `GamepadRightTrigger`, `GamepadDPadUp`, `GamepadDPadDown`, `GamepadDPadLeft`, `GamepadDPadRight`, `GamepadMenu`, `GamepadView`, `GamepadLeftThumbstick`, `GamepadRightThumbstick`, `GamepadLeftThumbStickUp`, `GamepadLeftThumbstickDown`, `GamepadLeftThumbstickRight`, `GamepadLeftThumbstickLeft`, `GamepadRightThumbstickUp`, `GamepadRightThumbstickDown`, `GamepadRightThumbstickRight`, `GamepadRightThumbstickLeft` to the `Key` enum
@@ -125,9 +131,3 @@
 
 ### XYFocus
 * Added the `.win-xbox` class
-
-## Deprecations
-* Deprecated the `swipeBehavior` property of `ItemContainer` and `ListView`
-* Deprecated the `SettingsFlyout` control
-* Deprecated the `SearchBox` control
-* Deprecated the values `global` and `selection` from the `section` property in `AppBarCommand`
