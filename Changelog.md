@@ -87,7 +87,7 @@
 * Added the values `NavigationView`, `NavigationMenu`, `NavigationUp`, `NavigationDown`, `NavigationLeft`, `NavigationRight`, `NavigationAccept`, `NavigationCancel`, `GamepadA`, `GamepadB`, `GamepadX`, `GamepadY`, `GamepadRightShoulder`, `GamepadLeftShoulder`, `GamepadLeftTrigger`, `GamepadRightTrigger`, `GamepadDPadUp`, `GamepadDPadDown`, `GamepadDPadLeft`, `GamepadDPadRight`, `GamepadMenu`, `GamepadView`, `GamepadLeftThumbstick`, `GamepadRightThumbstick`, `GamepadLeftThumbStickUp`, `GamepadLeftThumbstickDown`, `GamepadLeftThumbstickRight`, `GamepadLeftThumbstickLeft`, `GamepadRightThumbstickUp`, `GamepadRightThumbstickDown`, `GamepadRightThumbstickRight`, `GamepadRightThumbstickLeft` to the `Key` enum
 
 ### AppBar
-* Added the interface `ICommand`
+* Added the `ICommand` interface
 * Added the `ClosedDisplayMode` enum
 * Added the `Placement` enum
 * Added the `forceLayout` method
