@@ -71,6 +71,11 @@
 * Renamed the `.win-type-x-small` class to `.win-type-base` or `.win-h5`
 * Renamed the `.win-type-xx-small` class to `.win-type-caption`
 
+### XYFocus
+*XYFocus is now enabled by default*
+* (from 4.0-Preview) Removed the `enableXYFocus` method
+* (from 4.0-Preview) Removed the `disableXYFocus` method
+
 ## Notable changes
 ### Utilities
 * Added the values `NavigationView`, `NavigationMenu`, `NavigationUp`, `NavigationDown`, `NavigationLeft`, `NavigationRight`, `NavigationAccept`, `NavigationCancel`, `GamepadA`, `GamepadB`, `GamepadX`, `GamepadY`, `GamepadRightShoulder`, `GamepadLeftShoulder`, `GamepadLeftTrigger`, `GamepadRightTrigger`, `GamepadDPadUp`, `GamepadDPadDown`, `GamepadDPadLeft`, `GamepadDPadRight`, `GamepadMenu`, `GamepadView`, `GamepadLeftThumbstick`, `GamepadRightThumbstick`, `GamepadLeftThumbStickUp`, `GamepadLeftThumbstickDown`, `GamepadLeftThumbstickRight`, `GamepadLeftThumbstickLeft`, `GamepadRightThumbstickUp`, `GamepadRightThumbstickDown`, `GamepadRightThumbstickRight`, `GamepadRightThumbstickLeft` to the `Key` enum
@@ -120,8 +125,6 @@
 
 ### XYFocus
 * Added the `.win-xbox` class
-* (from 4.0-Preview) Removed the `enableXYFocus` method
-* (from 4.0-Preview) Removed the `disableXYFocus` method
 
 ## Deprecations
 * Deprecated the `swipeBehavior` property of `ItemContainer` and `ListView`
