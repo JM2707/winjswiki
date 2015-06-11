@@ -61,6 +61,8 @@
 * (from 4.0-Preview) Renamed the `ShownDisplayMode` enum to `OpenedDisplayMode`
 * (from 4.0-Preview) Renamed the `shownDisplayMode` property to `openedDisplayMode`
 * (from 4.0-Preview) Renamed the `showPane` method to `openPane`
+* (from 4.0-Preview) Renamed `win-splitview-pane-shown` CSS class to `win-splitview-pane-opened`
+* (from 4.0-Preview) Renamed `win-splitview-pane-hidden` CSS class to `win-splitview-pane-closed`
 
 ### Typography
 * Renamed the `.win-type-xx-large` class to `.win-type-header` or `.win-h1`
