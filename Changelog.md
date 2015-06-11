@@ -1,3 +1,8 @@
+# v4.0.1
+
+## Core
+* Fixed: Windows Phone 10 accent color issue ([6164967](https://github.com/winjs/winjs/commit/6164967b6a93d84719d3d2fa0caefb0312bcccf4), [#1222](https://github.com/winjs/winjs/issues/1222))
+
 # v4.0
 
 ## New features
@@ -61,8 +66,8 @@
 * (from 4.0-Preview) Renamed the `ShownDisplayMode` enum to `OpenedDisplayMode`
 * (from 4.0-Preview) Renamed the `shownDisplayMode` property to `openedDisplayMode`
 * (from 4.0-Preview) Renamed the `showPane` method to `openPane`
-* (from 4.0-Preview) Renamed `win-splitview-pane-shown` CSS class to `win-splitview-pane-opened`
-* (from 4.0-Preview) Renamed `win-splitview-pane-hidden` CSS class to `win-splitview-pane-closed`
+* (from 4.0-Preview) Renamed the `.win-splitview-pane-shown` CSS class to `.win-splitview-pane-opened`
+* (from 4.0-Preview) Renamed the `.win-splitview-pane-hidden` CSS class to `.win-splitview-pane-closed`
 
 ### Typography
 * Renamed the `.win-type-xx-large` class to `.win-type-header` or `.win-h1`
