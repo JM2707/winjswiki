@@ -28,19 +28,21 @@
 * The `WinJS.Utilities.isPhone` property will return undefined
 
 ### AppBar
-* Removed the `showCommands` method
-* Removed the `hideCommands` method
 * Removed the `disabled` property
+* Removed the `hideCommands` method
 * Removed the `layout` property
+* Removed the `showCommands` method
 * Removed the `sticky` property
+* Removed the `.win-commandlayout` CSS class
+* Renamed the `commands` property to `data`
+* Renamed the `hidden` property to `opened`
+* Renamed the `hide` method to `close`
 * Renamed the `onafterhide` event to `onafterclose`
 * Renamed the `onaftershow` event to `onafteropen`
 * Renamed the `onbeforehide` event to `onbeforeclose`
 * Renamed the `onbeforeshow` event to `onbeforeopen`
-* Renamed the `hide` method to `close`
 * Renamed the `show` method to `open`
-* Renamed the `commands` property to `data`
-* Renamed the `hidden` property to `opened`
+* Renamed the `.win-appbar-hidden` CSS class to `.win-appbar-closed`
 
 ### NavBar
 * Removed the `disabled` property
