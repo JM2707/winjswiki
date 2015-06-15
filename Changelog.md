@@ -88,7 +88,7 @@
 ## Deprecations
 * Deprecated the `swipeBehavior` property of `ItemContainer` and `ListView`
 * Deprecated the `SettingsFlyout` control
-* Deprecated the `SearchBox` control
+* Deprecated the `SearchBox` control. Instead, use the `AutoSuggestBox`.
 * Deprecated the values `global` and `selection` from the `section` property in `AppBarCommand`
 
 ## Notable changes
