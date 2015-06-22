@@ -32,7 +32,7 @@
 * Removed the `hideCommands` method
 * Removed the `layout` property
 * Removed the `showCommands` method
-* Removed the `sticky` property
+* Removed the `sticky` property. Set the `closedDisplayMode` property to `compact` or `full` to replicate similar behavior.
 * Removed the `.win-commandlayout` CSS class
 * Renamed the `commands` property to `data`
 * Renamed the `hidden` property to `opened`
