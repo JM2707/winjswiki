@@ -2,7 +2,6 @@
 
 ## Core
 * Fixed: Accent color sometimes not applied ([d3c0820](https://github.com/winjs/winjs/commit/d3c0820130b5d9f1fbdaa0ed9db40af0533e668e), [#1202](https://github.com/winjs/winjs/issues/1202))
-* Fixed: Windows Phone 10 accent color issue ([6164967](https://github.com/winjs/winjs/commit/6164967b6a93d84719d3d2fa0caefb0312bcccf4), [#1222](https://github.com/winjs/winjs/issues/1222))
 
 # v4.0
 
