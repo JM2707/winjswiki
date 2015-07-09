@@ -28,7 +28,7 @@ Grunt dependencies are installed separately in each cloned git repo. Install the
 npm install
 ```
 
-Edit `src/js/base.js` and `src/js/ui.js` to include only the modules that you want. Note that `WinJS/Core/_WinJS` and 'WinJS/Utilities' are required.
+Edit `src/js/base.js` and `src/js/ui.js` to include only the modules that you want. Note that `WinJS/Core/_WinJS` and `WinJS/Utilities` are required.
 
 Run the following and the WinJS JavaScript and CSS files will be put in the `bin` directory:
 ```
