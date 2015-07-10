@@ -1,3 +1,44 @@
+# v4.1
+
+## Deprecations
+* Fixed: Added deprecation warning to `createResultSuggestionImage` API for `SearchBox` ([2c6b4d0](https://github.com/winjs/winjs/commit/2c6b4d078fa035c80d7b46f29ef0f9c37616ee14), [#1268](https://github.com/winjs/winjs/issues/1268))
+
+## Notable changes
+### AppBar
+* Fixed: Fails to overflow when `closedDisplayMode === "none"` ([4000e32](https://github.com/winjs/winjs/commit/4000e327ee010fc95c9983495b15806ef104e50f), [#1183](https://github.com/winjs/winjs/issues/1183))
+* Fixed: Initializing with `closedDisplayMode: minimal` will layout commands incorrectly ([4000e32](https://github.com/winjs/winjs/commit/4000e327ee010fc95c9983495b15806ef104e50f), [#1220](https://github.com/winjs/winjs/issues/1220))
+
+### Core
+* Fixed: Type-To-Search related crash when involving iframes ([c2e5c92](https://github.com/winjs/winjs/commit/c2e5c9262a8c075ddce629f88bff44b81c4e3390), [#1131](https://github.com/winjs/winjs/issues/1131))
+
+### Flyout
+* Added `showAt` API ([d6a622a](https://github.com/winjs/winjs/commit/d6a622a8f797fe15c3a539dc5b53fb7fb4a6ff81))
+* Fixed: Click-eater blocks light dismissal until closed ([14bc964](https://github.com/winjs/winjs/commit/14bc964525aebb1657c28ef1129e7189703bfa3b), [#1256](https://github.com/winjs/winjs/issues/1256))
+
+### Hub
+* Fixed: Crashes when the header is an element with no `classList` API ([7004d49](https://github.com/winjs/winjs/commit/7004d499bd199628e129490b29ee653988f2cc65), [#1254](https://github.com/winjs/winjs/issues/1254))
+
+### ListView
+* Disabled animations when `ListView` or `ItemContainer` are in selection mode ([61d854d](https://github.com/winjs/winjs/commit/61d854da2388777e11b94d69c743c868c5b51464))
+
+### Menu
+* Added `showAt` API ([d6a622a](https://github.com/winjs/winjs/commit/d6a622a8f797fe15c3a539dc5b53fb7fb4a6ff81))
+
+### Pivot
+* Implemented new animations ([1ed0d4a](https://github.com/winjs/winjs/commit/1ed0d4abaac22469260309867dfc91578f19fac9))
+
+### Styling
+* Fixed: WinJS crashes when loaded in a `display: none` iframe on Firefox by defaulting to ui-light.css ([a045428](https://github.com/winjs/winjs/commit/a045428815cda2f6b005e1590af64598c07ff972), [#1253](https://github.com/winjs/winjs/issues/1253))
+* Updated `AppBar` for high contrast ([189d656](https://github.com/winjs/winjs/commit/189d656635e73a59a7180404f9542431a551e902))
+* Updated `ContentDialog` for high contrast ([e9cf1c6](https://github.com/winjs/winjs/commit/e9cf1c6a4e3809dc414de5ef41137911c9ce2b07))
+* Updated range control styling ([a88502d](https://github.com/winjs/winjs/commit/a88502d46bb19a920b96d33c5b21ba51aff55191))
+* Updated `ToggleSwitch` styles ([60522c1](https://github.com/winjs/winjs/commit/60522c1232a7b76241f54de31a72b466e77c290b))
+* Updated `ToolBar` for high contrast ([189d656](https://github.com/winjs/winjs/commit/189d656635e73a59a7180404f9542431a551e902))
+
+### XYFocus
+
+* Fixed: Crashes when loaded in a WebWorker ([0b06c40](https://github.com/winjs/winjs/commit/0b06c40d35bbcfaf902c25bbe682967978b3630f), [#1250](https://github.com/winjs/winjs/issues/1250))
+
 # v4.0.1
 
 ## Core
