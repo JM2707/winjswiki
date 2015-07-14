@@ -16,3 +16,4 @@ This project is actively developed by the WinJS developers working for Microsoft
 * [Live Code Preview](http://try.buildwinjs.com)
 * [Using WinJS with React](Using-WinJS-with-React)
 * [Styling HTML Controls](Styling-HTML-Controls)
+* [Localizing WinJS in a Windows Store App](Localizing-WinJS-in-a-Windows-Store-App)
