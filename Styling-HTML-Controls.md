@@ -33,7 +33,7 @@ Use the `win-link` class on `<a>` elements to apply Windows styling.
 Use the `win-code` class on `<pre>` and `<code>` elements to apply Windows styling.
 
 ###Ellipsis
-Use the `win-ellipsis` class on an overflowing element to get a '...' text-overflow style.
+Use the `win-type-ellipsis` class on an overflowing element to get a '...' text-overflow style.
 
 ##Controls
 
