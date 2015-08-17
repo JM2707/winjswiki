@@ -1,3 +1,63 @@
+# v4.2
+
+## New features
+* Added the `SplitViewCommand` control ([6113bbc](https://github.com/winjs/winjs/commit/6113bbc6cc41cccecc9519c4fd14e5d1027a2344))
+* Added the `VUI` utility ([adae969](https://github.com/winjs/winjs/commit/adae969d663a0cb3c699a9f3b55a604804c0bc5e))
+
+## Deprecations
+* Deprecated the `NavBar`, `NavBarContainer` and `NavBarCommand` controls ([02266ee](https://github.com/winjs/winjs/commit/02266eed1790fee551e98b19ec634f7964d37a9f))
+
+## Notable changes
+### AppBar
+* Fixed: Elements may be rendered on top of a closed `AppBar` ([7fecf50](https://github.com/winjs/winjs/commit/7fecf504e1000bafdb0457b5d5673581f23936a0), [#1203](https://github.com/winjs/winjs/issues/1203))
+* Fixed: Focuses wrong command when programmatically opened ([46f7228](https://github.com/winjs/winjs/commit/46f72285d6c7ee2c855f42cfc1f3322629b4b08f), [#1300](https://github.com/winjs/winjs/issues/1300))
+* Fixed: Improve logic for displaying the overflow button ([7cb5776](https://github.com/winjs/winjs/commit/7cb57760beeb0197eb80d33e201edc9b55d505e2), [#982](https://github.com/winjs/winjs/issues/982), [#1170](https://github.com/winjs/winjs/issues/1170), [#1340](https://github.com/winjs/winjs/issues/1340))
+* Fixed: Tabbing should not move focus out of opened `AppBar` ([2619e6f](https://github.com/winjs/winjs/commit/2619e6fb5ff86b5c50b72254ff1909d321360bf6), [#1073](https://github.com/winjs/winjs/issues/1073))
+* Fixed: Toggling `hidden` property on `Commands` now properly animates ([7b2da7a](https://github.com/winjs/winjs/commit/7b2da7aa9a2aecd56a4bcbc6f91297b2569e203d), [#1055](https://github.com/winjs/winjs/issues/1055))
+
+### ContentDialog
+* Fixed: Improve response to the InputPane ([5a1dc55](https://github.com/winjs/winjs/commit/5a1dc55f460543d3b699fa2aa41bfdb152c81867), [#1149](https://github.com/winjs/winjs/issues/1149), [#910](https://github.com/winjs/winjs/issues/910))
+* Fixed: Make the `title` a header ([cf7098f](https://github.com/winjs/winjs/commit/cf7098f22f0d23b6fa5128f9f33bc75e7618c2b8), [#1176](https://github.com/winjs/winjs/issues/1176))
+
+### Hub
+* Fixed: `Hub` doesn't leave room for the app title ([288cffc](https://github.com/winjs/winjs/commit/288cffca8d5e09f92e9d3cca05251abf032fd5f4), [#1224](https://github.com/winjs/winjs/issues/1224))
+* Fixed: Mousewheel scrolling issue on Chrome ([ca91896](https://github.com/winjs/winjs/commit/ca9189662de36b115c4b9074994c5b2b9ce340b1), [#1273](https://github.com/winjs/winjs/issues/1273))
+
+### NavBar
+* Fixed: Elements may be rendered on top of a closed `NavBar` ([7fecf50](https://github.com/winjs/winjs/commit/7fecf504e1000bafdb0457b5d5673581f23936a0), [#1203](https://github.com/winjs/winjs/issues/1203))
+
+### Pivot
+* Fixed: Header animation goes the wrong direction ([63f6140](https://github.com/winjs/winjs/commit/63f6140543dfac828229025f9baa6198bf78deb5), [#1264](https://github.com/winjs/winjs/issues/1264))
+* Fixed: `selectionchanged` event fired before the `selectionIndex` is updated ([8973734](https://github.com/winjs/winjs/commit/89737344bc23a3196de63d81b0552de6f05daba4), [#1317](https://github.com/winjs/winjs/issues/1317))
+* Fixed: Touch not being able to interact with custom headers ([549b60f](https://github.com/winjs/winjs/commit/549b60ffcb0594e32900892087cb9643d496657e), [#1263](https://github.com/winjs/winjs/issues/1263))
+
+### SplitView
+* Fixed: Add public `invoked` event to `SplitViewCommand` ([6f9f4f2](https://github.com/winjs/winjs/commit/6f9f4f2bcffcce6aa99444753791a18a8168d6cc))
+* Fixed: Make `SplitViewCommand` work great when put inside a `SplitView` pane ([05b83d9](https://github.com/winjs/winjs/commit/05b83d91682e897a92c77c3cbe8388e803985547), [#1258](https://github.com/winjs/winjs/issues/1258))
+* Fixed: `SplitViewCommand` has the wrong background color ([32fc70e](https://github.com/winjs/winjs/commit/32fc70e97d38861cf1a726e28d66c8de6ce0303b), [#1309](https://github.com/winjs/winjs/issues/1309))
+
+### Styling
+* Fixed: Add a spacer element to the end of the overflow area to create 24px of space after the last menu command in `AppBar` and `ToolBar` ([26bee7a](https://github.com/winjs/winjs/commit/26bee7a9c606f362dcb7e4189b04ac99663a16e8))
+* Fixed: Disabled submit buttons color ([dda39e6](https://github.com/winjs/winjs/commit/dda39e6e3467b476939ff9a5278392e71c827c38), [#1304](https://github.com/winjs/winjs/issues/1304))
+* Fixed: Update `SplitView` for high contrast ([9f942f0](https://github.com/winjs/winjs/commit/9f942f0e78d0e9339227aee8244fc95d0fe05b36))
+* Fixed: Update `SplitViewPaneToggle` for high contrast ([cdc550a](https://github.com/winjs/winjs/commit/cdc550a12ff378ef19c67cbf129f2ea8f18e8daa))
+
+### ToolBar
+* Fixed: Focuses wrong command when programmatically opened ([46f7228](https://github.com/winjs/winjs/commit/46f72285d6c7ee2c855f42cfc1f3322629b4b08f), [#1300](https://github.com/winjs/winjs/issues/1300))
+* Fixed: Improve logic for displaying the overflow button ([7cb5776](https://github.com/winjs/winjs/commit/7cb57760beeb0197eb80d33e201edc9b55d505e2), [#916](https://github.com/winjs/winjs/issues/916), [#982](https://github.com/winjs/winjs/issues/982), [#1170](https://github.com/winjs/winjs/issues/1170), [#1210](https://github.com/winjs/winjs/issues/1210), [#1340](https://github.com/winjs/winjs/issues/1340))
+* Fixed: Tabbing should not move focus out of opened `ToolBar` ([2619e6f](https://github.com/winjs/winjs/commit/2619e6fb5ff86b5c50b72254ff1909d321360bf6), [#1073](https://github.com/winjs/winjs/issues/1073))
+* Fixed: Toggling `hidden` property on `Commands` now properly animates ([7b2da7a](https://github.com/winjs/winjs/commit/7b2da7aa9a2aecd56a4bcbc6f91297b2569e203d), [#1055](https://github.com/winjs/winjs/issues/1055))
+
+### Typography
+* Fixed: Globalization fonts were missing from the intrinsics CSS ([c95741c](https://github.com/winjs/winjs/commit/c95741ce1930f11ca04a5eb13940f6db6a27d935), [#1282](https://github.com/winjs/winjs/issues/1282))
+
+### XYFocus
+* Fixed: Exception when using `XYFocus` with no active elements ([2bc9a40](https://github.com/winjs/winjs/commit/2bc9a406c7c3bb75fe91dc07f47c36fd647ce577), [#1311](https://github.com/winjs/winjs/issues/1311))
+* Fixed: Exception thrown when an `iframe` is removed from the DOM before the `XYFocus` registration message is handled ([0d4f090](https://github.com/winjs/winjs/commit/0d4f090d410439cbe4bade1d87ca1e8f1841a9aa), [#1312](https://github.com/winjs/winjs/issues/1312))
+* Fixed: Input elements are automatically treated as toggle mode enabled ([ddf9627](https://github.com/winjs/winjs/commit/ddf962750f4bb23dfe5f4acd238a004f4bc73cea))
+* Fixed: Un-registering disposed `iframes` ([702e625](https://github.com/winjs/winjs/commit/702e625b5e80a08eb179174ee615512c7501aabf), [#1291](https://github.com/winjs/winjs/issues/1291))
+* Implemented a toggle mode ([52a7b49](https://github.com/winjs/winjs/commit/52a7b4966143c42954cf4dee260d84e8ebe96751))
+
 # v4.1
 
 ## Deprecations
