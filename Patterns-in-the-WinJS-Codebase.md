@@ -23,3 +23,5 @@ See [#1253](/winjs/winjs/issues/1253) for more details.
 ### Feature Detection
 
 ### Listening to Global Events
+
+### Styling Accent Color
