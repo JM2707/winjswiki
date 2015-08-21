@@ -17,6 +17,15 @@ Firefox's implementation of `getComputedStyle` has a bug where it returns `null`
 See [#1253](/winjs/winjs/issues/1253) for more details.
 
 ### Pointer/Touch Events
+#### Guidance
+
+**Don't** register for [pointer events](http://www.w3.org/TR/pointerevents/) directly. Never register for [touch events](http://www.w3.org/TR/touch-events/) directly.
+
+Instead, register for pointer events via `_ElementUtilities._addEventListener`. This helper generates synthetic pointer events which work in all browsers regardless of whether they support pointer events or only touch events.
+
+#### Rationale
+
+Some browsers that WinJS cares about do not support pointer events. The `_ElementUtilities._addEventListener` helper enables you to sign up for pointer events that work in all browsers. For browsers that do not support pointer events, this helper polyfills them.
 
 ### Focus/Blur Events
 
