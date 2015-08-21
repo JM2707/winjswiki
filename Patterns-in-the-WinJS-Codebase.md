@@ -40,6 +40,16 @@ Instead, register for `focusin` and `focusout` on elements using `_ElementUtilit
 
 #### Rationale
 
+The behavior of the focus/blur events varies between browsers. Some examples of the variations:
+  - Some browsers do not support `focusin` or `focusout`. They only support `focus` and `blur`.
+  - In most browsers, `focus` and `blur` fire synchronously while in IE they fire asynchronously.
+  - In IE, within the `blur` event handler, `document.activeElement` is the element that will be receiving focus. In most other browsers, `document.activeElement` is null in that case. This makes it difficult to determine what element will be receiving focus within the `blur` event handler.
+
+The `_ElementUtilities._addEventListener` helper provides implementations of `focusout` and `focusin` which work consistently in all browsers. It provides a polyfill for browsers that do not support these events. Some characteristics of the implementation:
+  - The events fire synchronously
+  - Using `target` and `relatedTarget` off of the `eventObject`, you can determine both who is losing and who is gaining focus from within either event.
+  - `document.activeElement` has a consistent value within these event handlers in all browsers.
+
 ### Feature Detection
 
 ### Listening to Global Events
