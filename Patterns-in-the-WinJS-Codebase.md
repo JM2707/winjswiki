@@ -36,7 +36,7 @@ Instead, register for `focusin` and `focusout` on elements using `_ElementUtilit
 
 **Exception:** This helper is for focus/blur events on *elements* so if you want to listen to `blur` on `window`, you should just sign up for `blur` on `window` directly rather than using this helper.
 
-**Caveat:** Under some circumstances, the helper may appear to fail to fire a `focusout` event. The helper is built on top of the browser's native `focus`/`focusin` events only so if there's a scenario where the browser fires its native `blur`/`focusout` event but not its native `focus`/`focusin` event, then the helper will appear to fail to fire a `focusout` event. For example, this can happen if an element loses focus due to it being deleted which causes the browser moves focus to `body`. Because `body` doesn't have a `tabIndex` by default, the browser will not fire a `focus`/`focusin` event and consequently the helper will not fire a `focusout` event.
+**Caveat:** Under some circumstances, the helper may appear to fail to fire a `focusout` event. The helper is built on top of the browser's native `focus`/`focusin` events only so if there's a scenario where the browser fires its native `blur`/`focusout` event but not its native `focus`/`focusin` event, then the helper will appear to fail to fire a `focusout` event. For example, this can happen if an element loses focus due to it being deleted which causes the browser to move focus to `body`. Because `body` doesn't have a `tabIndex` by default, the browser will not fire a `focus`/`focusin` event and consequently the helper will not fire a `focusout` event.
 
 #### Rationale
 
