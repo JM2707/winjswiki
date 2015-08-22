@@ -59,5 +59,31 @@ The `_ElementUtilities._addEventListener` helper provides implementations of `fo
 ### Animations
 
 ### Flexbox (LESS)
+#### Guidance
+
+**Don't** use flexbox styles directly. For example:
+
+```less
+// DON'T do this
+.win-someelement {
+  display: flex;
+  flex-direction: column;
+}
+```
+
+Instead, use WinJS's [LESS mixin for flexbox](https://github.com/winjs/winjs/blob/3356f7d77de52035b21db1623e59efd1abe65178/src/less/mixins.less). For example:
+
+```less
+// DO this
+.win-someelement {
+  #flex > .display-flex();
+  #flex > .flex-direction(column);
+```
+
+#### Rationale
+
+Different browsers support different notations for flexbox. For example, some browsers require vendor-prefixed names (e.g. `-webkit-flex`). IE10 strays furthest from the current standard. It supports an older version of flexbox which has all of the same functionality but under completely different names (e.g. `align-items: flex-start` is written as `-ms-flex-align: start`).
+
+The LESS flexbox mixin takes care of handling all of these variations in flexbox notation for you so you don't have to worry about them.
 
 ### Manipulating Styles (JavaScript)
