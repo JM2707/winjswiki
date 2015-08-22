@@ -23,6 +23,7 @@ See [#1253](/winjs/winjs/issues/1253) for more details.
 
 Instead, register for pointer events via `_ElementUtilities._addEventListener`. This helper generates synthetic pointer events which work in all browsers regardless of whether they support pointer events or only touch events.
 
+For JavaScript code, we have [a jscs rule](https://github.com/winjs/winjs/blob/3356f7d77de52035b21db1623e59efd1abe65178/tasks/utilities/disallow-direct-pointer-events.js) to enforce this guidance.
 #### Rationale
 
 Some browsers that WinJS cares about do not support pointer events. The `_ElementUtilities._addEventListener` helper enables you to sign up for pointer events that work in all browsers. For browsers that do not support pointer events, this helper polyfills them.
