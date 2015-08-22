@@ -57,6 +57,17 @@ The `_ElementUtilities._addEventListener` helper provides implementations of `fo
 ### Styling Accent Color
 
 ### Animations
+#### Guidance
+
+**Don't** use `WinJS.UI.executeAnimation` for doing programmatic animations.
+
+Instead, use `WinJS.UI.executeTransition`.
+
+#### Rationale
+
+`executeAnimation` is based on CSS animations. To guarantee performance, you need to handwrite the keyframe and include it in the WinJS stylesheet. If you fail to do that, `executeAnimation` will generate the keyframe on the fly and add it to a dynamically generated stylesheet. This is a very expensive operation which will cause the browser to recalculate CSS formatting for the entire page.
+
+Instead, use `executeTransition` which is based on CSS transitions. There are no keyframes involved so there's no risk of accidentally making `executeTransition` expensive.
 
 ### Flexbox (LESS)
 #### Guidance
