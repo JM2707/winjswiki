@@ -99,3 +99,23 @@ Different browsers support different notations for flexbox. For example, some br
 The LESS flexbox mixin takes care of handling all of these variations in flexbox notation for you so you don't have to worry about them.
 
 ### Manipulating Styles (JavaScript)
+#### Guidance
+
+**Don't** manipulate the CSS attributes [in this list](https://github.com/winjs/winjs/blob/3356f7d77de52035b21db1623e59efd1abe65178/src/js/WinJS/Core/_BaseUtils.js#L89-L123) directly. For example:
+
+```js
+// DON'T do this
+someElement.style.transform = "";
+```
+
+Instead, get the name of the property thru the `_BaseUtils._browserStyleEquivalents` helper and then manipulate that. For example:
+
+```js
+// DO this
+var transformName = _BaseUtils._browserStyleEquivalents["transform"].scriptName;
+someElement.style[transformName] = "";
+```
+
+#### Rationale
+
+Some browsers only support vendor-prefixed versions of properties. For example, Safari supports `-webkit-transform` but not `transform`. The `_BaseUtils._browserStyleEquivalents` helper maps unprefixed CSS attribute names to the name that will work in the current browser.
