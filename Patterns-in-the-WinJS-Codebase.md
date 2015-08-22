@@ -60,4 +60,4 @@ The `_ElementUtilities._addEventListener` helper provides implementations of `fo
 
 ### Flexbox (LESS)
 
-### Manipulation Styles (JavaScript)
+### Manipulating Styles (JavaScript)
