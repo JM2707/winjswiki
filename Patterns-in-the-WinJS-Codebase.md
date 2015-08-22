@@ -55,3 +55,9 @@ The `_ElementUtilities._addEventListener` helper provides implementations of `fo
 ### Listening to Global Events
 
 ### Styling Accent Color
+
+### Animations
+
+### Flexbox (LESS)
+
+### Manipulation Styles (JavaScript)
