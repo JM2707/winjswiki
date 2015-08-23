@@ -76,7 +76,7 @@ For a control to utilize accent color, it should:
   );
   ```
 
-  Controls **should not call** `createAccentRule` [lazily](#lazy-modules).
+  Controls **should not call** `createAccentRule` [lazily](#lazy-modules). Instead, they should call `createAccentRule` eagerly when the WinJS JavaScript files are being loaded (i.e. outside of the lazy portion of their module). This ensures that `createAccentRule` will batch up accent color styles for all of the controls and dynamically generate a stylesheet one time. Dynamically generating CSS rules is expensive because it requires the browser to recalculate CSS formatting for the whole page so `createAccentRule` ideally only does this one time.
 
 #### Rationale
 
@@ -85,8 +85,6 @@ In Windows 10, users are able to select a systemwide accent color which some Win
 The platform only exposes the accent color via the `Windows.UI.ViewManagement.UISettings.getColorValue` API. If each control had to call this API directly, it would result in unnecessarily complicated code. Each control would have to worry about updating all of its accent colors when the user switched accent colors. Certain styling scenarios would be extra complicated requiring the control to sign up for several events (e.g. using accent color on hover).
 
 Instead, we've opted for the `createAccentRule` API which enables controls to express accent color styles in a declarative way resembling CSS.
-
-#### Rationale
 
 ### Animations
 #### Guidance
