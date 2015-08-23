@@ -76,7 +76,7 @@ For a control to utilize accent color, it should:
   );
   ```
 
-  Controls **should not call** `createAccentRule` [lazily](#LazyModules).
+  Controls **should not call** `createAccentRule` [lazily](#lazy-modules).
 
 #### Rationale
 
