@@ -56,6 +56,37 @@ The `_ElementUtilities._addEventListener` helper provides implementations of `fo
 ### Listening to Global Events
 
 ### Styling Accent Color
+#### Guidance
+For a control to utilize accent color, it should:
+
+1. Import the [accent color module](https://github.com/winjs/winjs/blob/3356f7d77de52035b21db1623e59efd1abe65178/src/js/WinJS/_Accents.ts)
+2. Declare its accent color styles using the `createAccentRule` function. This function is designed to resemble declarative styling via CSS. Its signature looks like this:
+
+  ```js
+  createAccentRule(selector: string, props: { name: string; value: ColorTypes; }[])
+  ```
+
+  Here's an example usage. Suppose you wanted to style the `outline-color` of the element with class name `win-contentdialog-dialog` to be the accent color. Here's how you would do that:
+
+  ```js
+  _Accents.createAccentRule(
+    ".win-contentdialog-dialog", [
+      { name: "outline-color", value: _Accents.ColorTypes.accent }
+    ]
+  );
+  ```
+
+  Controls **should not call** `createAccentRule` [lazily](#LazyModules).
+
+#### Rationale
+
+In Windows 10, users are able to select a systemwide accent color which some WinJS controls consume. Ideally, controls would style against the accent color in CSS using a CSS variable. However, such a variable is not currently available.
+
+The platform only exposes the accent color via the `Windows.UI.ViewManagement.UISettings.getColorValue` API. If each control had to call this API directly, it would result in unnecessarily complicated code. Each control would have to worry about updating all of its accent colors when the user switched accent colors. Certain styling scenarios would be extra complicated requiring the control to sign up for several events (e.g. using accent color on hover).
+
+Instead, we've opted for the `createAccentRule` API which enables controls to express accent color styles in a declarative way resembling CSS.
+
+#### Rationale
 
 ### Animations
 #### Guidance
