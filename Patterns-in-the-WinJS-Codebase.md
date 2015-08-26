@@ -150,3 +150,5 @@ someElement.style[transformName] = "";
 Some browsers only support vendor-prefixed versions of properties. For example, Safari supports `-webkit-transform` but not `transform`. The `_BaseUtils._browserStyleEquivalents` helper maps unprefixed CSS attribute names to the name that will work in the current browser.
 
 ### Lazy Modules
+
+### d.ts Files
