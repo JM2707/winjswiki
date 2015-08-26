@@ -152,3 +152,5 @@ Some browsers only support vendor-prefixed versions of properties. For example, 
 ### Lazy Modules
 
 ### d.ts Files
+
+### Localization
