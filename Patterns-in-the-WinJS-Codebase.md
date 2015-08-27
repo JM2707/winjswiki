@@ -151,6 +151,7 @@ Instead, use WinJS's [LESS mixin for flexbox](https://github.com/winjs/winjs/blo
 .win-someelement {
   #flex > .display-flex();
   #flex > .flex-direction(column);
+}
 ```
 
 #### Rationale
