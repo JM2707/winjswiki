@@ -77,7 +77,7 @@ There are a number of [different helpers in `_ElementUtilities`](https://github.
 
 There's also [`Application._applicationListener`](https://github.com/winjs/winjs/blob/14ac97cfceebf46fed769e7c95fdad7507b68cc5/src/js/WinJS/Application.js#L854-L857) for listening to events on `WinJS.Application`.
 
-If you need to register for events on a global object which isn't listed, it's easy to create a new one using [`GenericListener`](https://github.com/winjs/winjs/blob/14ac97cfceebf46fed769e7c95fdad7507b68cc5/src/js/WinJS/Utilities/_ElementUtilities.js#L794-L893).
+If you need to register for events on a global object which isn't listed, it's easy to create a new helper using [`GenericListener`](https://github.com/winjs/winjs/blob/14ac97cfceebf46fed769e7c95fdad7507b68cc5/src/js/WinJS/Utilities/_ElementUtilities.js#L794-L893).
 
 #### Rationale
 
