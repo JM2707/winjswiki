@@ -52,6 +52,51 @@ The `_ElementUtilities._addEventListener` helper provides implementations of `fo
   - `document.activeElement` has a consistent value within these event handlers in all browsers.
 
 ### Feature Detection
+#### Guidance
+**Don't** detect platforms. Examples:
+
+```js
+// DON'T do these things:
+if (hasWinRT) { ... }
+if (isFirefox) { ... }
+if (isXbox) { ... }
+```
+
+Instead, detect the particular features you are interested in using:
+
+```js
+// DO these things 
+
+if (_WinRT.Windows.UI.ViewManagement.InputPane) { ... }
+
+var supportsCssGrid = !!("-ms-grid-row" in _Global.document.documentElement.style);
+if (supportsCssGrid) { ... }
+```
+
+##### Notes WinRT
+
+When using a `WinRT` API, ensure that API appears in [`_WinRT.js`](https://github.com/winjs/winjs/blob/a51bc901243b9c4eb646bd414e707cd0aa8ce30c/src/js/WinJS/Core/_WinRT.js). For example, if you wanted to use `Windows.UI.ViewManagement.InputPane`, put that API into `_WinRT.js` and then you can feature detect it like this:
+
+```js
+if (_WinRT.Windows.UI.ViewManagement.InputPane) {
+  // Use Windows.UI.ViewManagement.InputPane
+}
+```
+
+The `_WinRT` module ensures that it's safe to "dot into" each object of the API. Without the `_WinRT` module, you'd have to write much more verbose feature detection code. For example:
+
+```js
+// _WinRT module saves you from this kind of verbosity
+if (Windows && Windows.UI && Windows.UI.ViewManagement && Windows.UI.ViewManagement.InputPane) {
+  // Use Windows.UI.ViewManagement.InputPane
+}
+```
+
+#### Rationale
+
+Detecting features rather than detecting platforms has a number of benefits including:
+  - If a platform adds support for a feature that WinJS uses, WinJS will begin taking advantage of that feature in that platform without any change to the WinJS code.
+  - If a platform removes support for a feature WinJS uses, WinJS will continue to work on that platform without any change to the WinJS code.
 
 ### Listening to Global Events
 #### Guidance
