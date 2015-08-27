@@ -54,6 +54,38 @@ The `_ElementUtilities._addEventListener` helper provides implementations of `fo
 ### Feature Detection
 
 ### Listening to Global Events
+#### Guidance
+**Don't** sign up for global events directly. For example:
+
+```js
+// DON'T do this
+window.addEventListener("wheel", handler);
+```
+
+Instead, sign up thru one of the helpers in `_ElementUtilities`. For example:
+
+```js
+// DO this
+_ElementUtilities._globalListener.addEventListener(element, "wheel", handler);
+```
+
+There are a number of [different helpers in `_ElementUtilities`](https://github.com/winjs/winjs/blob/14ac97cfceebf46fed769e7c95fdad7507b68cc5/src/js/WinJS/Utilities/_ElementUtilities.js#L1281-L1285) for different global objects including:
+  - `window`: `_globalListener`
+    - `window` `resize`: `_resizeNotifier` (this should probably just be `_globalListener` but it predates everything else)
+  - `document.documentElement`: `_documentElementListener`
+  - `Windows.UI.ViewManagement.InputPane.getForCurrentView()`: `_inputPaneListener`
+
+There's also [`Application._applicationListener`](https://github.com/winjs/winjs/blob/14ac97cfceebf46fed769e7c95fdad7507b68cc5/src/js/WinJS/Application.js#L854-L857) for listening to events on `WinJS.Application`.
+
+If you need to register for events on a global object which isn't listed, it's easy to create a new one using [`GenericListener`](https://github.com/winjs/winjs/blob/14ac97cfceebf46fed769e7c95fdad7507b68cc5/src/js/WinJS/Utilities/_ElementUtilities.js#L794-L893).
+
+#### Rationale
+
+This approach avoids memory leaks. If you were to register for an event on a global object directly and for some reason failed to unregister the handler when your object was done being used, your object would be leaked by the global object.
+
+For example, suppose a control signs up for `window` resize directly. If the control was thrown away without `dispose` being called on it, the `window` would prevent the control from ever being garbage collected because the control is still listening to `window` resize.
+
+The `_ElementUtilities` helpers work by indirectly signing clients up to the event. `_ElementUtilities` is the only one that registers for the event directly so only it can be leaked. However, this is okay because `_ElementUtilities` will exist for the lifetime of the application anyway. Elements interested in a particular event add a special class name to themselves indicating that they're interested in the event. When the event fires, `_ElementUtilities` queries the DOM for elements with the unique class name for that event and notifies those elements that the event has fired. In this way, elements sign up indirectly for events and avoid the risk of being leaked.
 
 ### Styling Accent Color
 #### Guidance
