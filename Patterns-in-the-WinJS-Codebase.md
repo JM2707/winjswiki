@@ -75,7 +75,7 @@ if (supportsCssGrid) { ... }
 
 ##### Notes on WinRT
 
-When using a `WinRT` API, ensure that API appears in [`_WinRT.js`](https://github.com/winjs/winjs/blob/a51bc901243b9c4eb646bd414e707cd0aa8ce30c/src/js/WinJS/Core/_WinRT.js). For example, if you wanted to use `Windows.UI.ViewManagement.InputPane`, put that API into `_WinRT.js` and then you can feature detect it like this:
+When using a `WinRT` API, ensure that the API appears in [`_WinRT.js`](https://github.com/winjs/winjs/blob/a51bc901243b9c4eb646bd414e707cd0aa8ce30c/src/js/WinJS/Core/_WinRT.js). For example, if you wanted to use `Windows.UI.ViewManagement.InputPane`, put that API into `_WinRT.js` and then you can feature detect it like this:
 
 ```js
 if (_WinRT.Windows.UI.ViewManagement.InputPane) {
