@@ -73,7 +73,7 @@ var supportsCssGrid = !!("-ms-grid-row" in _Global.document.documentElement.styl
 if (supportsCssGrid) { ... }
 ```
 
-##### Notes WinRT
+##### Notes on WinRT
 
 When using a `WinRT` API, ensure that API appears in [`_WinRT.js`](https://github.com/winjs/winjs/blob/a51bc901243b9c4eb646bd414e707cd0aa8ce30c/src/js/WinJS/Core/_WinRT.js). For example, if you wanted to use `Windows.UI.ViewManagement.InputPane`, put that API into `_WinRT.js` and then you can feature detect it like this:
 
@@ -97,6 +97,8 @@ if (Windows && Windows.UI && Windows.UI.ViewManagement && Windows.UI.ViewManagem
 Detecting features rather than detecting platforms has a number of benefits including:
   - If a platform adds support for a feature that WinJS uses, WinJS will begin taking advantage of that feature in that platform without any change to the WinJS code.
   - If a platform removes support for a feature WinJS uses, WinJS will continue to work on that platform without any change to the WinJS code.
+
+We've even gone so far as to [feature detect bugs](https://github.com/winjs/winjs/blob/a51bc901243b9c4eb646bd414e707cd0aa8ce30c/src/js/WinJS/Controls/ListView/_Layouts.js#L217-L227). Essentially, if we detect that a bug exists, we run code that works around the bug. When the browser fixes the bug, WinJS will automatically stop using the workaround in that browser. This is useful if there are downsides (e.g. performance) to the workaround.
 
 ### Listening to Global Events
 #### Guidance
