@@ -25,4 +25,4 @@ This compiles WinJS and opens /bin/tests/tests.html page.
 * There are several tests that test for the loss and gain of focus, these tests typically fail if you interacted with the browser in even the slightest way. They should pass when re-running them.
 
 ### Tests Status 
-Please refer to [http://try.buildwinjs.com/#status](http://try.buildwinjs.com/#status) for the latest status of the unit tests and the list of known issues.
+Please refer to [http://winjs.azurewebsites.com/#status](http://try.buildwinjs.com/#status) for the latest status of the unit tests and the list of known issues.
