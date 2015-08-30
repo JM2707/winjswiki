@@ -322,6 +322,40 @@ define([
 
 ##### TypeScript
 
+Because TypeScript has built-in syntax for defining namespaces, we can't use the `_Base.Namespace._lazy` helper to make modules lazy like we can in JavaScript. We've come up with an alternate pattern which involves creating two files to make a TypeScript module lazy: one file is loaded eagerly and the other file is loaded lazily. Let's do the `WinJS.UI.ShinyWidget` example from above in TypeScript.
+
+First, we'll look at the pattern of the eagerly loaded file:
+
+```ts
+// src/js/WinJS/Controls/ShinyWidget.ts
+
+import _Base = require('../Core/_Base');
+
+// Note that no methods of _ShinyWidget are used in this file.
+// It's only used for type information. Consequently, TypeScript
+// will not include _ShinyWidget in the generated JavaScript and
+// thus this file will not force the _ShinyWidget module to be
+// loaded eagerly.
+import _ShinyWidget = require('./ShinyWidget/_ShinyWidget');
+
+var module: typeof _ShinyWidget = null;
+
+_Base.Namespace.define("WinJS.UI", {
+    ShinyWidget: {
+        get: () => {
+            if (!module) {
+                // Load the _ShinyWidget module on demand the first time somebody
+                // tries to access the WinJS.UI.ShinyWidget property.
+                require(["./ShinyWidget/_ShinyWidget"], (m: typeof _ShinyWidget) => {
+                    module = m;
+                });
+            }
+            return module.ShinyWidget;
+        }
+    }
+});
+```
+
 #### Rationale
 
 ### d.ts Files
