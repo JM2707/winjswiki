@@ -236,7 +236,7 @@ When defining a module, run as much of the code lazily/on-demand as possible. Fo
 
 ##### JavaScript
 
-**Don't** do this because all of the code will run during start up:
+**Don't** write code like this because all of the code will run during start up:
 
 ```js
 define([
@@ -244,9 +244,11 @@ define([
 ], function shinyWidgetInit(_Base) {
     "use strict";
 
+    // DON'T write code like this. All of this code will run during start up.
+
     var constant1 = ...;
-    var constant1 = ...;
-    var constant1 = ...;
+    var constant2 = ...;
+    var constant3 = ...;
 
     function helper1() {
         ...
@@ -280,12 +282,17 @@ define([
 ], function shinyWidgetInit(_Base) {
     "use strict";
 
+    // DO write code like this.
+
     _Base.Namespace.define("WinJS.UI", {
         ShinyWidget: _Base.Namespace._lazy(function () {
 
+            // All of this code will run on demand the first time
+            // the WinJS.UI.ShinyWidget property is accessed.
+
             var constant1 = ...;
-            var constant1 = ...;
-            var constant1 = ...;
+            var constant2 = ...;
+            var constant3 = ...;
 
             function helper1() {
                 ...
