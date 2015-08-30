@@ -396,7 +396,7 @@ export class ShinyWidget {
 
 #### Rationale
 
-The benefit of lazy modules is in making start up time faster. Prior to lazy modules, all WinJS initialization code was run during start up (e.g. code to define constants, helper functions, classes). After lazy modules were introduced, only the minimum amount of code is run to define the API surface of WinJS (i.e. everything under the `WinJS` namespace). All of the other initialization code is run on demand as the app accesses properties of the `WinJS` namespace. This improved WinJS's start up performance noticeably.
+The benefit of lazy modules is in making start up time faster. Prior to lazy modules, all WinJS initialization code was run during start up (e.g. code to define constants, helper functions, classes). After lazy modules were introduced, only the minimum amount of code is run during start up to define the API surface of WinJS (i.e. everything under the `WinJS` namespace). All of the other initialization code is run on demand as the app accesses properties of the `WinJS` namespace. This improved WinJS's start up performance noticeably.
 
 ### d.ts Files
 
