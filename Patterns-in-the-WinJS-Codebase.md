@@ -322,12 +322,15 @@ define([
 
 ##### TypeScript
 
-Because TypeScript has built-in syntax for defining namespaces, we can't use the `_Base.Namespace._lazy` helper to make modules lazy like we can in JavaScript. We've come up with an alternate pattern which involves creating two files to make a TypeScript module lazy: one file is loaded eagerly and the other file is loaded lazily. Let's do the `WinJS.UI.ShinyWidget` example from above in TypeScript.
+Because TypeScript has built-in syntax for defining modules, we can't use the `_Base.Namespace._lazy` helper to make modules lazy like we can in JavaScript. We've come up with an alternate pattern which involves creating two files to make a TypeScript module lazy: one file which is loaded eagerly and the other file which is loaded lazily. Let's do the `WinJS.UI.ShinyWidget` example from above in TypeScript.
 
-First, we'll look at the pattern of the eagerly loaded file:
+First, we'll look at the pattern of the eagerly loaded file. For controls, the convention is that this file goes in the `Controls` folder and its name **does not** begin with an underscore which indicates that it is a public module.
 
 ```ts
+// Eagerly loaded file
 // src/js/WinJS/Controls/ShinyWidget.ts
+
+// All code that should be run during start up goes in here.
 
 import _Base = require('../Core/_Base');
 
@@ -354,6 +357,40 @@ _Base.Namespace.define("WinJS.UI", {
         }
     }
 });
+```
+
+Now let's look at the lazily loaded file. For controls, the convention is that we create a folder that has the same name as the control (e.g. `ShinyWidget`) and this folder goes into the `Controls` folder. Then the lazily loaded file goes inside of the `ShinyWidget` folder and the file name is the control name prefixed with an underscore (e.g. `_ShinyWidget.ts) to indicate that it is not public -- consumers should reference the eagerly loaded file rather than the lazily loaded file.
+
+```ts
+// Lazily loaded file
+// src/js/WinJS/Controls/ShinyWidget/_ShinyWidget.ts
+
+// All code that should be run on demand the first time the
+// WinJS.UI.ShinyWidget property is accessed should go in here.
+
+var constant1 = ...;
+var constant2 = ...;
+var constant3 = ...;
+
+function helper1() {
+    ...
+}
+function helper2() {
+    ...
+}
+function helper3() {
+    ...
+}
+
+export class ShinyWidget {
+    static staticMember1(): void { }
+    static staticMember2(): void { }
+    static staticMember3(): void { }
+
+    instanceMember1(): void { }
+    instanceMember2(): void { }
+    instanceMember3(): void { }
+}
 ```
 
 #### Rationale
