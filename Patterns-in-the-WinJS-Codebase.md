@@ -244,7 +244,8 @@ define([
 ], function shinyWidgetInit(_Base) {
     "use strict";
 
-    // DON'T write code like this. All of this code will run during start up.
+    // DON'T write code like this. All of this code will run
+    // during start up.
 
     var constant1 = ...;
     var constant2 = ...;
