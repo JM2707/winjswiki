@@ -360,7 +360,7 @@ _Base.Namespace.define("WinJS.UI", {
 });
 ```
 
-Now let's look at the lazily loaded file. For controls, the convention is that we create a folder that has the same name as the control (e.g. `ShinyWidget`) and this folder goes into the `Controls` folder. Then the lazily loaded file goes inside of the `ShinyWidget` folder and the file name is the control name prefixed with an underscore (e.g. `_ShinyWidget.ts) to indicate that it is not public -- consumers should reference the eagerly loaded file rather than the lazily loaded file.
+Now let's look at the lazily loaded file. For controls, the convention is that we create a folder that has the same name as the control (e.g. `ShinyWidget`) and this folder goes into the `Controls` folder. Then the lazily loaded file goes inside of the `ShinyWidget` folder and the file name is the control name prefixed with an underscore (e.g. `_ShinyWidget.ts`) to indicate that it is not public -- consumers should reference the eagerly loaded file rather than the lazily loaded file.
 
 ```ts
 // Lazily loaded file
