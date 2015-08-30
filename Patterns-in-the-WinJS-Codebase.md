@@ -334,7 +334,7 @@ First, we'll look at the pattern of the eagerly loaded file. For controls, the c
 
 import _Base = require('../Core/_Base');
 
-// Note that no methods of _ShinyWidget are used in this file.
+// Note that no members of _ShinyWidget are used in this file.
 // It's only used for type information. Consequently, TypeScript
 // will not include _ShinyWidget in the generated JavaScript and
 // thus this file will not force the _ShinyWidget module to be
