@@ -230,6 +230,91 @@ someElement.style[transformName] = "";
 Some browsers only support vendor-prefixed versions of properties. For example, Safari supports `-webkit-transform` but not `transform`. The `_BaseUtils._browserStyleEquivalents` helper maps unprefixed CSS attribute names to the name that will work in the current browser.
 
 ### Lazy Modules
+#### Guidance
+
+When defining a module, run as much of the code lazily/on-demand as possible. For example, suppose we were defining the `WinJS.UI.ShinyWidget`. During start up, the only code that should run is enough code to publish a `WinJS.UI.ShinyWidget` property. The code for defining constants, helpers, the `ShinyWidget` class, etc. should only run the first time somebody tries to access the `WinJS.UI.ShinyWidget` property.
+
+##### JavaScript
+
+**Don't** do this because all of the code will run during start up:
+
+```js
+define([
+    '../Core/_Base',
+], function shinyWidgetInit(_Base) {
+    "use strict";
+
+    var constant1 = ...;
+    var constant1 = ...;
+    var constant1 = ...;
+
+    function helper1() {
+        ...
+    }
+    function helper2() {
+        ...
+    }
+    function helper3() {
+        ...
+    }
+
+    _Base.Namespace.define("WinJS.UI", {
+        ShinyWidget: _Base.Class.define(function shinyWidget_ctor(element, options) {
+            ...
+        }, {
+            instanceMember1: function () { },
+            instanceMember2: function () { }
+        }, {
+            staticMember1: function () { },
+            staticMember2: function () { },
+        }
+    });
+});
+```
+
+Instead, use the `_Base.Namespace._lazy` so that none of the code inside of `_lazy` is run during start up -- it only gets run on demand the first time the `WinJS.UI.ShinyWidget` property is accessed.
+
+```js
+define([
+    '../Core/_Base',
+], function shinyWidgetInit(_Base) {
+    "use strict";
+
+    _Base.Namespace.define("WinJS.UI", {
+        ShinyWidget: _Base.Namespace._lazy(function () {
+
+            var constant1 = ...;
+            var constant1 = ...;
+            var constant1 = ...;
+
+            function helper1() {
+                ...
+            }
+            function helper2() {
+                ...
+            }
+            function helper3() {
+                ...
+            }
+
+            var ShinyWidget = _Base.Class.define(function shinyWidget_ctor(element, options) {
+                ...
+            }, {
+                instanceMember1: function () { },
+                instanceMember2: function () { }
+            }, {
+                staticMember1: function () { },
+                staticMember2: function () { },
+            }
+        });
+        return ShinyWidget;
+    });
+});
+```
+
+##### TypeScript
+
+#### Rationale
 
 ### d.ts Files
 
