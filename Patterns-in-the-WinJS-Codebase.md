@@ -348,7 +348,8 @@ _Base.Namespace.define("WinJS.UI", {
         get: () => {
             if (!module) {
                 // Load the _ShinyWidget module on demand the first time
-                // somebody tries to access the WinJS.UI.ShinyWidget property.
+                // somebody tries to access the WinJS.UI.ShinyWidget
+                // property.
                 require(["./ShinyWidget/_ShinyWidget"], (m: typeof _ShinyWidget) => {
                     module = m;
                 });
