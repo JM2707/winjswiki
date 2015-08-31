@@ -400,4 +400,29 @@ The benefit of lazy modules is in making start up time faster. Prior to lazy mod
 
 ### d.ts Files
 
+#### Guidance
+
+WinJS has a few different categories of TypeScript d.ts files:
+
+##### [`winjs.d.ts`](https://github.com/winjs/winjs/blob/17a5ffe0c440d43e9997eb2effb13a1727e4fcaf/typings/winjs/winjs.d.ts)
+
+This file represents the public API surface of WinJS (i.e. the `WinJS` namespace). It is consumed by apps written in TypeScript as well as by the WinJS unit tests which are written in TypeScript.
+
+##### [`winjs.dev.d.ts`](https://github.com/winjs/winjs/blob/17a5ffe0c440d43e9997eb2effb13a1727e4fcaf/tests/TestLib/winjs.dev.d.ts)
+
+This file is consumed by the WinJS unit tests which are written in TypeScript. This file should contain any private WinJS APIs that are needed by the unit tests.
+
+##### Per Module d.ts Files
+
+Some WinJS modules written in JavaScript have d.ts files associated with them. Some examples:
+  - [_ElementUtilities.js](https://github.com/winjs/winjs/blob/17a5ffe0c440d43e9997eb2effb13a1727e4fcaf/src/js/WinJS/Utilities/_ElementUtilities.js) has [_ElementUtilities.d.ts](https://github.com/winjs/winjs/blob/17a5ffe0c440d43e9997eb2effb13a1727e4fcaf/src/js/WinJS/Utilities/_ElementUtilities.d.ts)
+  - [Promise.js](https://github.com/winjs/winjs/blob/17a5ffe0c440d43e9997eb2effb13a1727e4fcaf/src/js/WinJS/Promise.js) has [Promise.d.ts](https://github.com/winjs/winjs/blob/17a5ffe0c440d43e9997eb2effb13a1727e4fcaf/src/js/WinJS/Promise.d.ts)
+  - [Animations.js](https://github.com/winjs/winjs/blob/17a5ffe0c440d43e9997eb2effb13a1727e4fcaf/src/js/WinJS/Animations.js) has [Animation.d.ts](https://github.com/winjs/winjs/blob/17a5ffe0c440d43e9997eb2effb13a1727e4fcaf/src/js/WinJS/Animations.d.ts)
+
+These kinds of d.ts files are needed for WinJS modules which are written in JavaScript and are consumed by WinJS modules which are written in TypeScript.  These d.ts files are only consumed internally by WinJS code.
+
+#### Summary
+
+Internal WinJS code uses WinJS thru modules whereas external code (e.g. apps, unit tests) uses WinJS thru the `WinJS` namespace which gets published off of `window`.
+
 ### Localization
