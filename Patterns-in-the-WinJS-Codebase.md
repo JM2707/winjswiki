@@ -426,3 +426,23 @@ These kinds of d.ts files are needed for WinJS modules which are written in Java
 Internal WinJS code uses WinJS thru modules whereas external code (e.g. apps, unit tests) uses WinJS thru the `WinJS` namespace which gets published off of `window`.
 
 ### Localization
+
+#### Localizing a String
+
+Whenever a string needs to be localized, you add it to the resjson file for US English: [`strings/en-us/Microsoft.WinJS.resjson`](https://github.com/winjs/winjs/blob/17a5ffe0c440d43e9997eb2effb13a1727e4fcaf/src/strings/en-us/Microsoft.WinJS.resjson)
+
+The en-us resjson file contains key value pairs where the key represents a unique name for the string and the value is the english translation of the string.
+
+The en-us resjson file regularly gets handed off to the localization team who ensures the strings are translated into the roughly 100 languages that WinJS supports. The resjson file for each language is stored in the [`strings`](https://github.com/winjs/winjs/tree/17a5ffe0c440d43e9997eb2effb13a1727e4fcaf/src/strings) folder.
+
+#### Consuming a String
+
+To use the localized version of a string, you generally have an object called `strings` near the top of your file which has a key per localized string used by the file. For example:
+
+```js
+var strings = {
+    get closeOverlay() { return _Resources._getWinJSString("ui/closeOverlay").value; },
+};
+```
+
+And when you need to use the localized string, you write: `strings.closeOverlay`.
