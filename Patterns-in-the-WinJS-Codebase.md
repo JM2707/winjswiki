@@ -10,22 +10,40 @@ This page is a work in progress.
 Let's do an example. Suppose we start out with rules that look like this:
 
 ```less
-// Hover rule
-.win-appbar .win-overflow-button:hover {
-  background-color: @listHover;
-}
+.Colors(@theme) {
+  // Hover rule
+  // specificity: 0,0,3,0
+  .win-appbar .win-overflow-button:hover {
+    background-color: @listHover;
+  }
 
-// Active rule (non-hover rule -- includes :hover just to make sure we beat the :hover rule)
-.win-appbar .win-overflow-button:active:hover {
-  background-color: @listActive;
+  // Active rule (non-hover rule -- includes :hover just to make
+  // sure we beat the :hover rule)
+  // specificity: 0,0,4,0
+  .win-appbar .win-overflow-button:active:hover {
+    background-color: @listActive;
 }
 ```
 
-For example, suppose you want to style the `background-color` of an element on hover. You should put it into the `ColorsHover` mixin like this:
+As instructed by `(1)`, we take the hover rule and put it into the `ColorsHover` mixin.
 
 ```less
 .ColorsHover(@theme) {
+  // hover rule
+  // specificity: 0,0,4,1
   .win-appbar .win-overflow-button:hover {
+    background-color: @listHover;
+  }
+}
+```
+
+The active rule is a non-hover rule so it stays outside of the `ColorsHover` mixin as per `(2)`. Recall that the `ColorsHover` mixin causes the rule's specificity to be boosted by 1 class and 1 element. To make sure the `active` rule continues to beat the `hover` rule, we boost its specificity by 1 class by duplicating its last class:
+
+```less
+.Colors(@theme) {
+  // active rule
+  // specificity: 0,0,5,0
+  .win-appbar .win-overflow-button.win-overflow-button:active:hover {
     background-color: @listHover;
   }
 }
