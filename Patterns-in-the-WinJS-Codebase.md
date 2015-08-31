@@ -15,6 +15,8 @@ There are a number of patterns that appear in the WinJS codebase. This page cata
   - [Lazy Modules](#lazy-modules)
   - [d.ts Files](#dts-files)
   - [Localization](#localization)
+  - [Deprecating APIs](#deprecation-apis)
+  - [Dispose Pattern](#dispose-pattern)
 
 ### Styling Hover
 #### Guidance
@@ -554,3 +556,7 @@ And when you need to use the localized string, you write: `strings.closeOverlay`
 To understand how an app makes use of WinJS's localized resources, see:
   - Windows Store App: [Localizing WinJS in a Windows Store App](Localizing-WinJS-in-a-Windows-Store-App)
   - Web app: [#1163](/winjs/winjs/issues/1163)
+
+### Deprecating APIs
+
+### Dispose Pattern
