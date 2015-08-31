@@ -1,3 +1,5 @@
+There are a number of patterns that appear in the WinJS codebase. This page catalogues the patterns. In general, you should follow them. However, this document describes the rationale behind each pattern so you can understand when you've run into a case where a pattern shouldn't be followed.
+
 ### Table of Contents
 
   - [Styling Hover](#styling-hover)
