@@ -3,6 +3,8 @@ This page is a work in progress.
 ### Styling Hover
 #### Guidance
 
+When styling hover, you must consider the following rules:
+
 1. (LESS) Hover rules should be expressed inside of the `ColorsHover` LESS mixin. The specificity of rules within the `ColorsHover` mixin increases by 1 element and 1 class.
 2. (LESS) Non-hover rules which include `:hover` in their selector **do not** go into the `ColorsHover` mixin. `:focus` and `:active` rules commonly fall into this category. For such rules, you'll need to consider the specificity of rules within the `ColorsHover` mixin and it's common to need to boost the specificity of the rule by 1 class. The convention is to duplicate the last class of the rule.
 3. (JavaScript/TypeScript) Modules which style hover must include the [`_Hoverable` module](https://github.com/winjs/winjs/blob/17a5ffe0c440d43e9997eb2effb13a1727e4fcaf/src/js/WinJS/Utilities/_Hoverable.js).
