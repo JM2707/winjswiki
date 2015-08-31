@@ -15,7 +15,7 @@ There are a number of patterns that appear in the WinJS codebase. This page cata
   - [Lazy Modules](#lazy-modules)
   - [d.ts Files](#dts-files)
   - [Localization](#localization)
-  - [Deprecating APIs](#deprecation-apis)
+  - [Deprecating APIs](#deprecating-apis)
   - [Dispose Pattern](#dispose-pattern)
 
 ### Styling Hover
