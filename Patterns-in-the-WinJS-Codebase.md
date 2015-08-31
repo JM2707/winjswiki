@@ -1,4 +1,6 @@
-There are a number of patterns that appear in the WinJS codebase. This page catalogues the patterns. In general, you should follow them. However, this document describes the rationale behind each pattern so you can understand when you've run into a case where a pattern shouldn't be followed.
+There are a number of patterns that appear in the WinJS codebase. This page catalogues the patterns and, for the most part, you should follow them. As with all guidelines, there are exceptions to the rule. This document also describes the rationale behind each pattern so you can decide when you should and shouldn't follow them.
+
+However, this document describes the rationale behind each pattern so you can understand when you've run into a case where a pattern shouldn't be followed.
 
 ### Table of Contents
 
