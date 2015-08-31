@@ -61,6 +61,32 @@ The active rule is a non-hover rule so it stays outside of the `ColorsHover` mix
 
 #### Rationale
 
+The motivation for this funky hover styling guidance is that `:hover` styles get stuck rendered on an element after tapping on it with touch in webkit ([#288](/winjs/winjs/issues/288)). The fix is to disable WinJS's hover styles in such browsers when the user is using touch.
+
+#### Mechanics
+
+The `_Hoverable` module adds the `win-hoverable` class to the `html` element during start up. If a touch event is detected in webkit, the `win-hoverable` class is removed. WinJS's hover rules are only in affect when the `win-hoverable` class is present. Thus WinJS's hover styles are disabled when removing the `win-hoverable` class.
+
+The `ColorsHover` mixin prefixes rules with `html.win-hoverable`. For example:
+
+```less
+.ColorsHover(@theme) {
+  .win-appbar .win-overflow-button:hover {
+    background-color: @listHover;
+  }
+}
+```
+
+expands to:
+
+```less
+html.win-hoverable .win-appbar .win-overflow-button:hover {
+  background-color: @listHover;
+}
+```
+
+That prefixing explains why rules inside of the `ColorsHover` mixin have their specificity increased by 1 class (`.win-hoverable`) and 1 element (`html`).
+
 ### getComputedStyle
 #### Guidance
 **Don't** call `_Global.getComputedStyle`.
