@@ -8,8 +8,16 @@ When styling hover, you must consider the following rules:
 1. (LESS) Hover rules should be expressed inside of the `ColorsHover` LESS mixin. The specificity of rules within the `ColorsHover` mixin increases by 1 element and 1 class.
 2. (LESS) Non-hover rules which include `:hover` in their selector **do not** go into the `ColorsHover` mixin. `:focus` and `:active` rules commonly fall into this category. For such rules, you'll need to consider the specificity of rules within the `ColorsHover` mixin and it's common to need to boost the specificity of the rule by 1 class. The convention is to duplicate the last class of the rule.
 3. (JavaScript/TypeScript) Modules which style hover must include the [`_Hoverable` module](https://github.com/winjs/winjs/blob/17a5ffe0c440d43e9997eb2effb13a1727e4fcaf/src/js/WinJS/Utilities/_Hoverable.js).
+  - **TypeScript Caveat**: In TypeScript, it's not enough to merely `require` the `_Hoverable` module. Because the `_Hoverable` module isn't actually used, TypeScript will omit the `_Hoverable` module from the generated JavaScript. Consequently, you have to access a property of the `_Hoverable` module to ensure that TypeScript will include it in the generated JavaScript. Like this:
 
-Let's do an example to illustrate rules `(1)` and `(2)`. Suppose we start out with rules that look like this:
+    ```ts
+    import _Hoverable = require("../../Utilities/_Hoverable");
+    
+    // Force-load Dependencies
+    _Hoverable.isHoverable;
+    ```
+
+Let's do an example to illustrate rules `(1)` and `(2)`. Suppose we start out with rules that look like this ([specificity calculator](http://specificity.keegan.st/)):
 
 ```less
 .Colors(@theme) {
