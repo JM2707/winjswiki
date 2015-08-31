@@ -61,7 +61,7 @@ The active rule is a non-hover rule so it stays outside of the `ColorsHover` mix
 
 #### Rationale
 
-The motivation for this funky hover styling guidance is that `:hover` styles get stuck rendered on an element after tapping on it with touch in webkit ([#288](/winjs/winjs/issues/288)). The fix is to disable WinJS's hover styles in such browsers when the user is using touch.
+The motivation for this funky hover styling guidance is that `:hover` styles get stuck rendered on an element after tapping on it with touch in webkit ([#288](/winjs/winjs/issues/288)). The fix is to disable WinJS's hover styles in such browsers when the user is using touch. The `:hover` styling guidance allows WinJS to enable and disable its hover rules as it sees fit.
 
 #### Mechanics
 
