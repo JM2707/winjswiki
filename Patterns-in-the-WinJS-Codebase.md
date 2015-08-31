@@ -32,6 +32,7 @@ Let's do an example to illustrate rules `(1)` and `(2)`. Suppose we start out wi
   // specificity: 0,0,4,0
   .win-appbar .win-overflow-button:active:hover {
     background-color: @listActive;
+  }
 }
 ```
 
