@@ -446,3 +446,7 @@ var strings = {
 ```
 
 And when you need to use the localized string, you write: `strings.closeOverlay`.
+
+To understand how an app makes use of WinJS's localized resources, see:
+  - Windows Store App: [Localizing WinJS in a Windows Store App](Localizing-WinJS-in-a-Windows-Store-App)
+  - Web app: [#1163](/winjs/winjs/issues/1163)
