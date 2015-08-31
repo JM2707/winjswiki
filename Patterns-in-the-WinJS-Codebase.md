@@ -1,6 +1,37 @@
 This page is a work in progress.
 
 ### Styling Hover
+#### Guidance
+
+1. (LESS) Hover rules should be expressed inside of the `ColorsHover` LESS mixin. The specificity of rules within the `ColorsHover` mixin increases by 1 element and 1 class.
+2. (LESS) Non-hover rules which include `:hover` in their selector **do not** go into the `ColorsHover` mixin. `:focus` and `:active` rules commonly fall into this category. For such rules, you'll need to consider the specificity of rules within the `ColorsHover` mixin and it's common to need to boost the specificity of the rule by 1 class. The convention is to duplicate the last class of the rule.
+3. (JavaScript/TypeScript) Modules which style hover must include the [`_Hoverable` module](https://github.com/winjs/winjs/blob/17a5ffe0c440d43e9997eb2effb13a1727e4fcaf/src/js/WinJS/Utilities/_Hoverable.js).
+
+Let's do an example. Suppose we start out with rules that look like this:
+
+```less
+// Hover rule
+.win-appbar .win-overflow-button:hover {
+  background-color: @listHover;
+}
+
+// Active rule (non-hover rule -- includes :hover just to make sure we beat the :hover rule)
+.win-appbar .win-overflow-button:active:hover {
+  background-color: @listActive;
+}
+```
+
+For example, suppose you want to style the `background-color` of an element on hover. You should put it into the `ColorsHover` mixin like this:
+
+```less
+.ColorsHover(@theme) {
+  .win-appbar .win-overflow-button:hover {
+    background-color: @listHover;
+  }
+}
+```
+
+#### Rationale
 
 ### getComputedStyle
 #### Guidance
