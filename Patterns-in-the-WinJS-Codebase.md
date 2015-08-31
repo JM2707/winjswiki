@@ -408,6 +408,8 @@ WinJS has a few different categories of TypeScript d.ts files:
 
 This file represents the public API surface of WinJS (i.e. the `WinJS` namespace). It is consumed by apps written in TypeScript as well as by the WinJS unit tests which are written in TypeScript.
 
+The [dts-verifier](https://github.com/winjs/winjs/tree/17a5ffe0c440d43e9997eb2effb13a1727e4fcaf/tools/dts-verifier) tool helps us ensure that `winjs.d.ts` is an accurate representation of the WinJS API surface.
+
 ##### [`winjs.dev.d.ts`](https://github.com/winjs/winjs/blob/17a5ffe0c440d43e9997eb2effb13a1727e4fcaf/tests/TestLib/winjs.dev.d.ts)
 
 This file is consumed by the WinJS unit tests which are written in TypeScript. This file should contain any private WinJS APIs that are needed by the unit tests.
