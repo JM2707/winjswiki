@@ -1,7 +1,7 @@
 ### Table of Contents
 
   - [Styling Hover](#styling-hover)
-  - [getComputedStyle](#getComputedStyle)
+  - [getComputedStyle](#getcomputedstyle)
   - [Pointer/Touch Events](#pointertouch-events)
   - [Focus/Blur Events](#focusblur-events)
   - [Feature Detection](#feature-detection)
