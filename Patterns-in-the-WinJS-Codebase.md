@@ -575,3 +575,8 @@ Instead, we first do a release to deprecate the API. This allows the API to cont
 After an API has been deprecated, we can delete it in the next release.
 
 ### Dispose Pattern
+#### Guidelines
+
+See the [Dispose Pattern Guidelines](Dispose-Pattern-Guidelines) wiki page for details.
+
+#### Rationale
