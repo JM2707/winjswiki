@@ -558,5 +558,20 @@ To understand how an app makes use of WinJS's localized resources, see:
   - Web app: [#1163](/winjs/winjs/issues/1163)
 
 ### Deprecating APIs
+#### Guidelines
+
+To deprecate an API:
+  - Add a `<deprecated>` doc comment to the API which describes that the API is deprecated, may not be available in future versions, and gives developers advice about what to use instead. [Example](https://github.com/winjs/winjs/blob/17a5ffe0c440d43e9997eb2effb13a1727e4fcaf/src/js/WinJS/Controls/SearchBox.js#L287-L289)
+  - Emit a deprecation warning anytime somebody uses the deprecated API.
+    - [Example of emitting deprecation warning](https://github.com/winjs/winjs/blob/17a5ffe0c440d43e9997eb2effb13a1727e4fcaf/src/js/WinJS/Controls/SearchBox.js#L292)
+    - [Example of defining a string to emit](https://github.com/winjs/winjs/blob/17a5ffe0c440d43e9997eb2effb13a1727e4fcaf/src/js/WinJS/Controls/SearchBox.js#L81)
+
+#### Rationale
+
+When we decide we want to get rid of an API, if we were to immediately delete that API from WinJS, it would be a painful experience for developers trying to upgrade. Their app would end up throwing exceptions or working incorrectly due to usages of APIs that were removed.
+
+Instead, we first do a release to deprecate the API. This allows the API to continue working while warning developers that it may not be available in the future. It gives developers a period to smoothly transition from the old API to the new API.
+
+After an API has been deprecated, we can delete it in the next release.
 
 ### Dispose Pattern
