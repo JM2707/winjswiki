@@ -580,3 +580,9 @@ After an API has been deprecated, we can delete it in the next release.
 See the [Dispose Pattern Guidelines](Dispose-Pattern-Guidelines) wiki page for details.
 
 #### Rationale
+
+When a developer is done with an instance of a WinJS control, the control may need to perform some cleanup. This may include:
+  - Canceling timeouts, `setImmediates`, XHRs, and other asynchronous work
+  - Unregistering from global events so that the control can be garbage collected
+
+The dispose pattern is designed to solve this problem. Every WinJS control implements a `dispose` function. The developer can call `dispose` on the control to communicate that it is done with the control and to give the control the opportunity to perform cleanup.
