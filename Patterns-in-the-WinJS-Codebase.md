@@ -591,7 +591,7 @@ The dispose pattern is designed to solve this problem. Every WinJS control imple
 ### High Contrast
 #### Guidelines
 
-It's best practice to define LESS variables for the colors of your WinJS control. You assign these variables different values depending on whether the page is in light theme, dark theme, or high contrast. This pattern enables you to define your CSS selectors in one spot rather than having to define them once for the light theme, once for the dark theme, and once for high contrast. Here's an example from `SplitView`:
+It's best practice to define LESS variables for the colors of your WinJS control. You assign these variables different values depending on whether the page is in light theme, dark theme, or high contrast. This pattern enables you to define your CSS selectors in one location rather than having to repeat them once for the light theme, once for the dark theme, and once for high contrast. Here's an example from `SplitView`:
 
 ```less
 #win-splitview {
@@ -609,7 +609,7 @@ It's best practice to define LESS variables for the colors of your WinJS control
         @paneBackgroundColor: ButtonFace;
     }
     
-    // Define a mixin which creates rules that use the color variables
+    // Define a mixin which creates rules that use the color variables.
     .stylesForTheme(@theme) {
         #win-splitview > .variableDefs(@theme);
         
@@ -625,7 +625,7 @@ It's best practice to define LESS variables for the colors of your WinJS control
 }
 
 .HighContrast() {
-    // Use the rules mixin for each high contrast.
+    // Use the rules mixin for high contrast.
     #win-splitview > .stylesForTheme(highcontrast);
 }
 ```
