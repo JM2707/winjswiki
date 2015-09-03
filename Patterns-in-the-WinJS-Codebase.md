@@ -642,7 +642,7 @@ Use the following colors in high contrast styles:
 
 Here's what they look like in High Contrast #1:
 
-**TODO: Add screen shot**
+![image](https://cloud.githubusercontent.com/assets/199935/9667708/4a6dddcc-5232-11e5-877d-d87ca1d595c4.png)
 
 #### Background
 
