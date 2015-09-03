@@ -589,6 +589,61 @@ When a developer is done with an instance of a WinJS control, the control may ne
 The dispose pattern is designed to solve this problem. Every WinJS control implements a `dispose` function. The developer can call `dispose` on the control to communicate that it is done with the control and to give the control the opportunity to perform cleanup.
 
 ### High Contrast
+#### Guidelines
+
+It's best practice to define LESS variables for the colors of your WinJS control. You assign these variables different values depending on whether the page is in light theme, dark theme, or high contrast. This pattern enables you to define your CSS selectors in one spot rather than having to define them once for the light theme, once for the dark theme, and once for high contrast. Here's an example from `SplitView`:
+
+```less
+#win-splitview {
+    .variableDefs(@theme) when not (@theme = highcontrast) {
+        // Colors for light and dark theme. The .colorDefinitions mixin
+        // gives us access to color variables which have the appropriate
+        // color for the chosen theme.
+        .colorDefinitions(@theme);
+        
+        @paneBackgroundColor: @chromeLow;
+    }
+    
+    .variableDefs(highcontrast) {
+        // Colors for high contrast.
+        @paneBackgroundColor: ButtonFace;
+    }
+    
+    // Define a mixin which creates rules that use the color variables
+    .stylesForTheme(@theme) {
+        #win-splitview > .variableDefs(@theme);
+        
+        .win-splitview-pane {
+            background-color: @paneBackgroundColor;
+        }
+    }
+}
+
+.Colors(@theme) {
+    // Use the rules mixin for each theme (light/dark).
+    #win-splitview > .stylesForTheme(@theme);
+}
+
+.HighContrast() {
+    // Use the rules mixin for each high contrast.
+    #win-splitview > .stylesForTheme(highcontrast);
+}
+```
+
+Use the following colors in high contrast styles:
+  - `-ms-hotlight`
+  - `ButtonFace`
+  - `ButtonText`
+  - `GrayText`
+  - `Highlight`
+  - `HighlightText`
+  - `Window`
+  - `WindowText`
+
+Here's what they look like in High Contrast #1:
+
+**TODO: Add screen shot**
+
 #### Background
 
 The following background applies to Edge, IE10+, and Windows Store Apps.
@@ -604,14 +659,14 @@ Here's an example:
 
 ```css
 // These styles only apply in non-high contrast mode.
-// They are ignored in high contrast made because the
-// default value of -ms-high-contrast-adjust is auto
+// They are ignored in high contrast mode because the
+// default value of -ms-high-contrast-adjust is auto.
 .myElement {
   background-color: gray;
   color: blue;
 }
 
-// These styles only apply in high contrast mode
+// These styles only apply in high contrast mode.
 @media screen and (-ms-high-contrast: active) {
   .myElement {
     background-color: ButtonFace;
