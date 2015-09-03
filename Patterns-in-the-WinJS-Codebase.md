@@ -17,6 +17,7 @@ There are a number of patterns that appear in the WinJS codebase. This page cata
   - [Localization](#localization)
   - [Deprecating APIs](#deprecating-apis)
   - [Dispose Pattern](#dispose-pattern)
+  - [High Contrast](#high-contrast)
 
 ### Styling Hover
 #### Guidance
@@ -586,3 +587,35 @@ When a developer is done with an instance of a WinJS control, the control may ne
   - Unregistering from global events so that the control can be garbage collected
 
 The dispose pattern is designed to solve this problem. Every WinJS control implements a `dispose` function. The developer can call `dispose` on the control to communicate that it is done with the control and to give the control the opportunity to perform cleanup.
+
+### High Contrast
+#### Background
+
+The following background applies to Edge, IE10+, and Windows Store Apps.
+
+When a Windows machine enters high contrast mode, the [`-ms-high-contrast-adjust`](https://msdn.microsoft.com/en-us/library/windows/apps/Hh441137.aspx) property comes into play. Its default value is `auto`. When its value on an element is `auto`, the following CSS attributes are ignored on that element:
+  - `color`
+  - `background-color`
+  - `background-image`
+
+This gives you the opportunity to restyle these attributes for high contrast without worrying about the specificity of the non-high contrast styles. To style elements for high contrast, use a [`-ms-high-contrast`](https://msdn.microsoft.com/en-us/library/windows/apps/hh465764.aspx) media query.
+
+Here's an example:
+
+```css
+// These styles only apply in non-high contrast mode.
+// They are ignored in high contrast made because the
+// default value of -ms-high-contrast-adjust is auto
+.myElement {
+  background-color: gray;
+  color: blue;
+}
+
+// These styles only apply in high contrast mode
+@media screen and (-ms-high-contrast: active) {
+  .myElement {
+    background-color: ButtonFace;
+    color: ButtonText;
+  }
+}
+```
