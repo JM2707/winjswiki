@@ -1,3 +1,42 @@
+# v4.3.0
+
+## Highlights
+### Accessibility Improvements
+* Intrinsic controls are more accessible in high contrast mode
+* AppBar/ToolBar are more accessible to narrator users
+* Menu is more accessible to narrator users
+* Pivot is more accessible in high contrast mode
+* ToggleSwitch is more accessible in high contrast mode
+
+### TV/Xbox UI Controls
+* We now build tv.js and ui-light-tv.css and ui-dark-tv.css, respectively. This file currently only contains the ScrollViewer control which is a scrolling container control, optimized for gamepad input modality.
+
+## Bug Fixes
+### General
+* Fixed the detection logic for CommonJS (#1354)
+* Fixed a crash when loading WinJS in a WebView (#1324)
+
+### AppBar/ToolBar
+* Fixed an issue where narrator would excessively announce MenuCommands (#1381, #1400)
+
+### ListView
+* Disabled ListView/ItemContainer pressed animations as the animations have been causing issues with invocation/selection near the edge of the control (#1319)
+
+### Pivot
+* PivotItems measurements are now more accurate (#1356)
+* Fixed an issue where the header focus visual would not display (#1383)
+
+### Rating
+* Fixed an issue where using arrow keys to change the ratings would not work (#1365)
+
+### SplitView
+* Fixed an issue with tabbing through and closing the SplitView (#1367)
+
+### XYFocus
+* IFrames with just a focusable body are now focusable with XYFocus (#1339)
+* Fixes an issue where preventDefault would not stop XYFocus from executing (#1378)
+
+
 # v4.2
 
 ## New features
