@@ -71,7 +71,7 @@ As instructed by `(1)`, we take the hover rule and put it into the `ColorsHover`
 }
 ```
 
-The active rule is a non-hover rule so it stays outside of the `ColorsHover` mixin as per `(2)`. Recall that the `ColorsHover` mixin causes the rule's specificity to be boosted by 1 class and 1 element. To make sure the `active` rule continues to beat the `hover` rule, we boost its specificity by 1 class by duplicating its last class:
+The active rule is a non-hover rule so it stays outside of the `ColorsHover` mixin as per `(3)`. Recall that the `ColorsHover` mixin causes the rule's specificity to be boosted by 1 class and 1 element. To make sure the `active` rule continues to beat the `hover` rule, we boost its specificity by 1 class by duplicating its last class:
 
 ```less
 .Colors(@theme) {
