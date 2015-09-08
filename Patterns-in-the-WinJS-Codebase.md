@@ -40,7 +40,7 @@ When styling hover, you must consider the following rules:
     _Hoverable.isHoverable;
     ```
 
-Let's do an example to illustrate rules `(1)` and `(2)`. Suppose we start out with rules that look like this ([specificity calculator](http://specificity.keegan.st/)):
+Let's do an example to illustrate rules `(2)` and `(3)`. Suppose we start out with rules that look like this ([specificity calculator](http://specificity.keegan.st/)):
 
 ```less
 .Colors(@theme) {
