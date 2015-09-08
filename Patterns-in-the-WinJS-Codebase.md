@@ -24,9 +24,10 @@ There are a number of patterns that appear in the WinJS codebase. This page cata
 
 When styling hover, you must consider the following rules:
 
-1. (LESS) Hover rules should be expressed inside of the `ColorsHover` LESS mixin. Note that the specificity of rules within the `ColorsHover` mixin increases by 1 element and 1 class.
-2. (LESS) Non-hover rules which include `:hover` in their selector **do not** go into the `ColorsHover` mixin. `:focus` and `:active` rules commonly fall into this category. For such rules, you'll need to consider the specificity of rules within the `ColorsHover` mixin and it's common to need to boost the specificity of the rule by 1 class. The convention is to duplicate the last class of the rule.
-3. (JavaScript/TypeScript) Modules which style hover must include the [`_Hoverable` module](https://github.com/winjs/winjs/blob/17a5ffe0c440d43e9997eb2effb13a1727e4fcaf/src/js/WinJS/Utilities/_Hoverable.js).
+1. (LESS) Theme-independent hover styles, including styles inside `high-contrast` media queries, are simply prefixed with `html.win-hoverable`.
+2. (LESS) Theme-specific hover rules should be expressed inside of the `ColorsHover` LESS mixin. Note that the specificity of rules within the `ColorsHover` mixin increases by 1 element and 1 class.
+3. (LESS) Non-hover rules which include `:hover` in their selector **do not** go into the `ColorsHover` mixin. `:focus` and `:active` rules commonly fall into this category. For such rules, you'll need to consider the specificity of rules within the `ColorsHover` mixin and it's common to need to boost the specificity of the rule by 1 class. The convention is to duplicate the last class of the rule.
+4. (JavaScript/TypeScript) Modules which style hover must include the [`_Hoverable` module](https://github.com/winjs/winjs/blob/17a5ffe0c440d43e9997eb2effb13a1727e4fcaf/src/js/WinJS/Utilities/_Hoverable.js).
   - **TypeScript Caveat**: In TypeScript, it's not enough to merely `require` the `_Hoverable` module. Because the `_Hoverable` module isn't actually used, TypeScript will omit the `_Hoverable` module from the generated JavaScript. Consequently, you have to access a property of the `_Hoverable` module to ensure that TypeScript will include it in the generated JavaScript. Like this:
 
     ```ts
