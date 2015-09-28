@@ -8,6 +8,7 @@ This project is actively developed by the WinJS developers working for Microsoft
 * [How to contribute](Contribute)
 * [Authoring Tests](Authoring-Tests)
 * [Patterns in the WinJS Codebase](Patterns-in-the-WinJS-Codebase)
+* [Update DOM Pattern](Update-DOM-Pattern)
 
 ## Documentation & Examples
 * [MSDN WinJS Documentation](http://msdn.microsoft.com/en-us/library/windows/apps/hh465493.aspx)
