@@ -16,3 +16,4 @@ This project is actively developed by the WinJS developers working for Microsoft
 * [Using WinJS with React](Using-WinJS-with-React)
 * [Styling HTML Controls](Styling-HTML-Controls)
 * [Localizing WinJS in a Windows Store App](Localizing-WinJS-in-a-Windows-Store-App)
+* [Dismissables and Stacking Contexts](Dismissables-and-Stacking-Contexts)
