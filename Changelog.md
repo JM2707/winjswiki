@@ -1,3 +1,10 @@
+# v4.3.1
+
+## Bug Fixes
+### General
+* Added `getNavManager` helper to avoid errors when running in Windows 8 compat mode (#1479)
+
+
 # v4.3.0
 
 ## Highlights
