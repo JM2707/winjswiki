@@ -1,3 +1,30 @@
+# v4.4
+
+## Highlights
+### Improving Cross Browser responsiveness
+* WinJS controls that need to be re-laid out when their root element changes size, can now do so automatically in all supported browsers instead of just IE and Edge. 
+
+### ListView
+* ListView now automatically responds to its element being resized in all supported browsers. Not just IE and Edge
+
+### FlipView
+* FlipView now automatically responds to its element being resized in all supported browsers. Not just IE and Edge
+
+### Pivot
+* Pivot now automatically responds to its element being resized in all supported browsers. Not just IE and Edge
+
+### Semantic Zoom
+* Semantic Zoom now automatically responds to its element being resized in all supported browsers. Not just IE and Edge
+
+### ViewBox
+* ViewBox now automatically responds to its element being resized in all supported browsers. Not just IE and Edge.
+* ViewBox now only responds to size changes to its element. If any changes are made to the ViewBox internal elements via DOM operations, and should cause the ViewBox to re-layout any part of itself, developers will have to call ViewBox.forceLayout() to trigger the re-layout manually.
+
+### Hub
+* Hub now automatically responds to its element being resized in all supported browsers. Not just IE and Edge.
+* forceLayout API added to Hub, use to manually trigger re-layouts.
+* Hub now only responds to size changes to its element. If any changes are made to the Hub internal elements directly via DOM operations, and should cause the Hub to re-layout any part of itself, developers will have to call Hub.forceLayout() to trigger the re-layout manually.
+
 # v4.3.1
 
 ## Bug Fixes
