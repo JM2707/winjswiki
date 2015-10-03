@@ -32,5 +32,5 @@ Edit `src/js/base.js` and `src/js/ui.js` to include only the modules that you wa
 
 Run the following and the WinJS JavaScript and CSS files will be put in the `bin` directory:
 ```
-grunt
+grunt release
 ```
