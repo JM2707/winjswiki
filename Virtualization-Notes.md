@@ -1,3 +1,5 @@
+The target audience of this page is the maintainers of WinJS.
+
 When working with UI controls which display collections of data, it can be useful for them to support some kind of virtualization for performance. This page contains a summary of different virtualization techniques:
 
 - **Lazy loading.** Load the on screen items synchronously. Load the off screen items asynchronously in the background. This is the approach the `Hub` takes. Once loaded, an item is never unloaded.
