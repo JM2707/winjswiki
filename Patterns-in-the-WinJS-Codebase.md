@@ -232,6 +232,25 @@ When used within a WinJS control, the root element of the control is typically p
 _ElementUtilities._globalListener.addEventListener(this.element, "wheel", handler);
 ```
 
+Note that when you register for events in this way, your event handler isn't sent the original. Instead, it is sent a new event and the original event is available under `eventObject.detail.originalEvent`. For example, if your handler used to look like this:
+
+```js
+window.addEventListener("wheel", function (eventObject) {
+  var pageX = eventObject.pageX;
+  // Use pageX
+});
+```
+
+It will now need to look like this:
+
+```js
+window.addEventListener("wheel", function (eventObject) {
+  eventObject = eventObject.detail.originalEvent; // Unwrap the event object
+  var pageX = eventObject.pageX;
+  // Use pageX
+});
+```
+
 There are a number of [different helpers in `_ElementUtilities`](https://github.com/winjs/winjs/blob/14ac97cfceebf46fed769e7c95fdad7507b68cc5/src/js/WinJS/Utilities/_ElementUtilities.js#L1281-L1285) for different global objects including:
   - `window`: `_globalListener`
     - `window` `resize`: `_resizeNotifier` (this should probably just be `_globalListener` but it predates everything else)
