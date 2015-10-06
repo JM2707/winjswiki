@@ -232,12 +232,12 @@ When used within a WinJS control, the root element of the control is typically p
 _ElementUtilities._globalListener.addEventListener(this.element, "wheel", handler);
 ```
 
-Note that when you register for events in this way, your event handler isn't sent the original. Instead, it is sent a new event and the original event is available under `eventObject.detail.originalEvent`. For example, if your handler used to look like this:
+Note that when you register for events in this way, your event handler isn't sent the original event. Instead, it is sent a new event and the original event is available under `eventObject.detail.originalEvent`. For example, if your handler used to look like this:
 
 ```js
 window.addEventListener("wheel", function (eventObject) {
   var pageX = eventObject.pageX;
-  // Use pageX
+  // Use pageX...
 });
 ```
 
@@ -247,7 +247,7 @@ It will now need to look like this:
 window.addEventListener("wheel", function (eventObject) {
   eventObject = eventObject.detail.originalEvent; // Unwrap the event object
   var pageX = eventObject.pageX;
-  // Use pageX
+  // Use pageX...
 });
 ```
 
