@@ -10,6 +10,7 @@ The Update DOM Pattern is a pattern that some WinJS controls follow including th
 - Never read from the DOM
   - Reading from the DOM is expensive because it can cause the browser to perform a layout. Consequently, it's best to avoid reading from the DOM.
   - Some controls like to use the DOM as a place to store state. They write some state into the DOM and read it back later. This tends to result in code that is hard to understand because it mixes the intent of the state with its representation in the DOM. It's better to store the state in instance variables which makes the intent clearer. Therefore, there's no reason to read state out of the DOM.
+  - Think of the DOM as one big global variable that everyone is always banging on. There's little guarantee that any state your store there won't be overwritten by someone else.
 - Isolate all DOM writes to a single method: `updateDom`
   - This frees most of the code in the control from having to worry about which pieces of UI need to be updated when changing a particular instance variable.
   - Enables UI code to focus on states instead of state transitions. Traditionally, code that changes an instance variable has to be aware of which pieces of UI it will affect. With the Update DOM pattern, the code in `updateDom` just has to worry about how the current state of the control should be transoformed into its representation in the DOM. Thus, you're thinking about states instead of state transitions and there are far fewer states than transitions.
