@@ -1,4 +1,4 @@
-In order to build WinJS, ensure that you have [git](http://git-scm.com/downloads) and [Node.js](http://nodejs.org/download/) installed.
+<pre><code><pre><code>****</code></pre></code></pre>In order to build WinJS, ensure that you have [git](http://git-scm.com/downloads) and [Node.js](http://nodejs.org/download/) installed.
 
 Clone a copy of the master WinJS git repo:
 ```
@@ -34,3 +34,4 @@ Run the following and the WinJS JavaScript and CSS files will be put in the `bin
 ```
 grunt release
 ```
+bq. bq. 
