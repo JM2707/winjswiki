@@ -1,3 +1,35 @@
+# v4.4.1
+
+## Bug Fixes
+### General 
+* Added "print" and "share" icons.
+* Fixed an issue where string concatenation was occurring instead of numeric addition.
+* getRelativeLeft() now properly uses offsetParent instead of parentNode in its implementation.
+
+### AppBar
+* AppBar no longer moves to the incorrect position when switching between software keyboards.
+
+### Flyout
+* Flyout no longer tries to read _currentPosition before initialization.
+
+### FlipView
+* FlipView now properly centers its content after touch manipulation - previously, users sometimes could not scroll all the way from the last item to the first item with a sufficient number of items.
+
+### ListView
+* ListView no longer crashes the app when you refresh a page containing a ListView.
+
+### Pivot
+* Adding a new PivotItem to a Pivot with zero items no longer attempts to operate on a null header.
+
+### SplitView
+* SplitView no longer moves over the top toolbar on an open pane.
+
+### Tooltip
+* Tooltips now work properly in CommandingSurface and Menu.
+
+### Xbox
+* Users no longer have to press A and B twice to reveal and dismiss the software keyboard.
+
 # v4.4
 
 ## Highlights
