@@ -1,3 +1,9 @@
+# v4.4.3
+
+## Bug Fixes
+### ListView
+* Fixed a faulty PointerCancel event registration.
+
 # v4.4.1
 
 ## Bug Fixes
