@@ -1,3 +1,9 @@
+# v4.4.4
+
+## Bug Fixes
+### ItemContainer
+* Fixed a null-ref exception.
+
 # v4.4.3
 
 ## Bug Fixes
